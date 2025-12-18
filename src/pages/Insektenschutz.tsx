@@ -10,26 +10,36 @@ const products = [
     title: "Spannrahmen",
     description: "Der Klassiker für Fenster. Spannrahmen lassen sich einfach einsetzen und herausnehmen – ideal für die regelmäßige Reinigung.",
     features: ["Einfache Montage", "Hohe Stabilität", "Passgenau gefertigt", "Leichte Reinigung"],
+    image: "/insektenschutz-spannrahmen.jpg",
+    imageAlt: "Spannrahmen Insektenschutz am Küchenfenster",
   },
   {
     title: "Drehrahmen",
     description: "Perfekt für Fenster, die regelmäßig geöffnet werden. Der Drehrahmen lässt sich zur Seite schwenken.",
     features: ["Schwenkbar", "Selbstschließend", "Robust", "Langlebig"],
+    image: "/insektenschutz-drehrahmen.jpg",
+    imageAlt: "Drehrahmen Insektenschutz an Balkontür",
   },
   {
     title: "Pendeltüren",
     description: "Die ideale Lösung für Balkontüren und Terrassentüren. Pendeltüren schließen automatisch und ermöglichen freies Durchgehen.",
     features: ["Automatisches Schließen", "Beidseitig begehbar", "Magnetverschluss", "Barrierefrei"],
+    image: "/insektenschutz-pendeltuer.jpg",
+    imageAlt: "Pendeltür Insektenschutz an Terrassentür",
   },
   {
     title: "Schiebetüren",
     description: "Platzsparend und elegant. Schiebetüren gleiten sanft zur Seite und sind ideal für große Öffnungen.",
     features: ["Platzsparend", "Elegantes Design", "Leichtgängig", "Große Durchgänge"],
+    image: "/insektenschutz-schiebetuer.jpg",
+    imageAlt: "Schiebetür Insektenschutz an großer Terrassentür",
   },
   {
     title: "Lichtschachtabdeckungen",
     description: "Schützen Sie Ihre Kellerfenster und Lichtschächte zuverlässig vor Insekten und Schmutz.",
     features: ["Wetterfest", "Stabil", "Einfache Montage", "Dauerhafter Schutz"],
+    image: "/insektenschutz-lichtschacht.jpg",
+    imageAlt: "Lichtschachtabdeckung Insektenschutz",
   },
 ];
 
@@ -55,8 +65,8 @@ export default function Insektenschutz() {
             </nav>
             <h1 className="text-primary-foreground mb-6">Insektenschutz</h1>
             <p className="text-xl text-primary-foreground/90 leading-relaxed">
-              Genießen Sie frische Luft ohne lästige Insekten. Ich biete hochwertige 
-              Insektenschutzlösungen für Fenster und Türen in Kreuzau und Umgebung – 
+              Genießen Sie frische Luft ohne lästige Insekten. Ich biete hochwertige
+              Insektenschutzlösungen für Fenster und Türen in Kreuzau und Umgebung –
               passgenau gefertigt und professionell montiert.
             </p>
           </div>
@@ -68,7 +78,7 @@ export default function Insektenschutz() {
         <div className="container-wide">
           <div className="grid gap-12">
             {products.map((product, index) => (
-              <article 
+              <article
                 key={product.title}
                 className="grid md:grid-cols-2 gap-8 items-center animate-fade-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -76,8 +86,8 @@ export default function Insektenschutz() {
                 <div className={index % 2 === 1 ? "md:order-2" : ""}>
                   <div className="aspect-[4/3] rounded-xl overflow-hidden bg-muted">
                     <img
-                      src="/placeholder.svg"
-                      alt={`${product.title} Insektenschutz in Kreuzau`}
+                      src={product.image}
+                      alt={product.imageAlt}
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />

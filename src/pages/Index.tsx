@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
 import { ServiceCard } from "@/components/sections/ServiceCard";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { ArrowRight, Phone, Shield, Sun, Sofa, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-living-room.jpg";
 
@@ -155,8 +154,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <Testimonials />
 
       {/* CTA Section */}
       <section className="section-padding gradient-navy text-primary-foreground">
