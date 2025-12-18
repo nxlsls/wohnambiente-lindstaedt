@@ -17,14 +17,14 @@ const products = [
     title: "Drehrahmen",
     description: "Perfekt für Fenster, die regelmäßig geöffnet werden. Der Drehrahmen lässt sich zur Seite schwenken.",
     features: ["Schwenkbar", "Selbstschließend", "Robust", "Langlebig"],
-    image: "/insektenschutz-drehtuer.jpg",
+    image: "/insektenschutz-drehrahmen.jpg",
     imageAlt: "Drehrahmen Insektenschutz an Balkontür",
   },
   {
     title: "Pendeltüren",
     description: "Die ideale Lösung für Balkontüren und Terrassentüren. Pendeltüren schließen automatisch und ermöglichen freies Durchgehen.",
     features: ["Automatisches Schließen", "Beidseitig begehbar", "Magnetverschluss", "Barrierefrei"],
-    image: "/insektenschutz-schiebetuer.jpg",
+    image: "/insektenschutz-pendeltuer.jpg",
     imageAlt: "Pendeltür Insektenschutz an Terrassentür",
   },
   {
