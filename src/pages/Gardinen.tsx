@@ -3,6 +3,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Phone } from "lucide-react";
+import { FAQ, gardinenFAQs } from "@/components/sections/FAQ";
 
 const features = [
   "Persönliche Beratung bei Ihnen zu Hause",
@@ -102,13 +103,20 @@ export default function Gardinen() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <FAQ
+        items={gardinenFAQs}
+        title="Häufige Fragen zu Gardinen"
+        description="Hier finden Sie Antworten auf die wichtigsten Fragen rund um Gardinen."
+      />
+
       {/* CTA */}
-      <section className="section-padding">
+      <section className="section-padding bg-background">
         <div className="container-wide text-center">
           <h2 className="mb-4">Neue Gardinen für Ihr Zuhause?</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Vereinbaren Sie einen Beratungstermin. Ich freue mich darauf, 
-            Ihre Wohnräume zu verschönern!
+            Vereinbaren Sie einen Beratungstermin. Ich freue mich darauf,
+            Ihre Wohnräume in Kreuzau, Düren, Jülich und Umgebung zu verschönern!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>

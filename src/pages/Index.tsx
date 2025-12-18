@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
 import { ServiceCard } from "@/components/sections/ServiceCard";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { ArrowRight, Phone, Shield, Sun, Sofa, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-living-room.jpg";
 
@@ -154,6 +155,9 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <Testimonials />
+
       {/* CTA Section */}
       <section className="section-padding gradient-navy text-primary-foreground">
         <div className="container-wide text-center">
@@ -161,7 +165,7 @@ export default function Index() {
             Persönliche Beratung vor Ort
           </h2>
           <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-            Ich komme zu Ihnen – für eine unverbindliche Beratung und 
+            Ich komme zu Ihnen – für eine unverbindliche Beratung und
             präzises Aufmaß direkt bei Ihnen zu Hause in Kreuzau und Umgebung.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -182,19 +186,23 @@ export default function Index() {
             <h2 className="mb-6">Raumausstattung in Kreuzau – Ihr Partner für Wohnqualität</h2>
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p>
-                <strong>Wohnambiente Lindstädt</strong> – das bin ich, Verena Lindstädt, 
-                Raumausstattermeisterin seit 2001. Mein Betrieb in Kreuzau steht für 
-                persönliche Beratung und handwerkliche Qualität bei Insektenschutz, 
+                <strong>Wohnambiente Lindstädt</strong> – das bin ich, Verena Lindstädt,
+                Raumausstattermeisterin seit 2001. Mein Betrieb in Kreuzau steht für
+                persönliche Beratung und handwerkliche Qualität bei Insektenschutz,
                 Sonnenschutz, Gardinen und Polsterarbeiten.
               </p>
               <p>
-                Ob Sie Schutz vor lästigen Insekten suchen, optimalen Sonnenschutz für Ihre Räume 
-                wünschen oder Ihre Möbel neu beziehen lassen möchten – ich berate Sie persönlich 
+                Ob Sie Schutz vor lästigen Insekten suchen, optimalen Sonnenschutz für Ihre Räume
+                wünschen oder Ihre Möbel neu beziehen lassen möchten – ich berate Sie persönlich
                 und finde gemeinsam mit Ihnen die beste Lösung für Ihr Zuhause.
               </p>
               <p>
-                Besuchen Sie mich in der Hoeschstraße 2 in 52372 Kreuzau oder rufen Sie an 
-                unter <a href="tel:02422504344" className="text-accent hover:underline">02422 / 504344</a>. 
+                Als Raumausstatterin bin ich für Kunden aus <strong>Kreuzau</strong>, <strong>Düren</strong>, <strong>Jülich</strong>, <strong>Nideggen</strong>, <strong>Heimbach</strong>, <strong>Vettweiß</strong>, <strong>Langerwehe</strong> und der gesamten Region tätig.
+                Gerne komme ich auch zu Ihnen nach Hause für eine unverbindliche Beratung vor Ort.
+              </p>
+              <p>
+                Besuchen Sie mich in der Hoeschstraße 2 in 52372 Kreuzau oder rufen Sie an
+                unter <a href="tel:02422504344" className="text-accent hover:underline">02422 / 504344</a>.
                 Ich freue mich auf Ihre Anfrage!
               </p>
             </div>

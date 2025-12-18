@@ -3,6 +3,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Phone } from "lucide-react";
+import { FAQ, polstereiFAQs } from "@/components/sections/FAQ";
 
 const services = [
   {
@@ -115,13 +116,20 @@ export default function Polsterei() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <FAQ
+        items={polstereiFAQs}
+        title="Häufige Fragen zur Polsterei"
+        description="Hier finden Sie Antworten auf die wichtigsten Fragen rund um Polsterarbeiten."
+      />
+
       {/* CTA */}
-      <section className="section-padding">
+      <section className="section-padding bg-background">
         <div className="container-wide text-center">
           <h2 className="mb-4">Möbel aufpolstern lassen?</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Kontaktieren Sie mich für ein unverbindliches Angebot. 
-            Ich berate Sie gerne!
+            Kontaktieren Sie mich für ein unverbindliches Angebot.
+            Ich berate Sie gerne in Kreuzau, Düren, Jülich und Umgebung!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
