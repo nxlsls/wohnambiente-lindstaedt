@@ -88,9 +88,10 @@ export default function Datenschutz() {
 
             <h2>5. SSL- bzw. TLS-Verschlüsselung</h2>
             <p>
-              Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher 
-              Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber 
-              senden, eine SSL- bzw. TLS-Verschlüsselung.
+              Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher
+              Inhalte, wie zum Beispiel Anfragen, die Sie an uns als Seitenbetreiber senden, eine
+              SSL- bzw. TLS-Verschlüsselung. Sie können eine verschlüsselte Verbindung an der
+              Zeichenfolge „https://" und dem Schloss-Symbol in Ihrer Browserzeile erkennen.
             </p>
 
             <h2>6. Aktualität und Änderung dieser Datenschutzerklärung</h2>
