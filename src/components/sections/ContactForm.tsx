@@ -17,8 +17,13 @@ export function ContactForm() {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
+    // Hidden fields für Formsubmit
+    formData.append("_subject", `Neue Kontaktanfrage: ${formData.get("subject") || "Allgemeine Anfrage"}`);
+    formData.append("_captcha", "false");
+    formData.append("_template", "table");
+
     try {
-      const response = await fetch("https://formspree.io/f/mkowngyn", {
+      const response = await fetch("https://formsubmit.co/ajax/info@wohnambiente-lindstaedt.de", {
         method: "POST",
         body: formData,
         headers: {
@@ -26,7 +31,9 @@ export function ContactForm() {
         },
       });
 
-      if (response.ok) {
+      const result = await response.json();
+
+      if (result.success) {
         toast({
           title: "Nachricht gesendet",
           description: "Vielen Dank! Wir melden uns zeitnah bei Ihnen.",
