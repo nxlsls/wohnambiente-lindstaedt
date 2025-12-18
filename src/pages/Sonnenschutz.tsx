@@ -10,26 +10,31 @@ const products = [
     title: "Plissees",
     description: "Flexible Sonnenschutzlösungen, die sich stufenlos einstellen lassen. Perfekt für unterschiedliche Lichtstimmungen.",
     features: ["Stufenlos einstellbar", "Große Farbauswahl", "Für alle Fensterformen", "Pflegeleicht"],
+    image: "/plissee-normal.png",
   },
   {
     title: "Wabenplissees",
     description: "Die Wabenstruktur sorgt für hervorragende Wärmedämmung im Winter und Hitzeschutz im Sommer.",
     features: ["Wärmedämmend", "Energiesparend", "Lärmdämmend", "Modernes Design"],
+    image: "/plissee-normal.png",
   },
   {
     title: "Jalousien",
     description: "Der Klassiker unter den Sonnenschutzlösungen. Jalousien bieten präzise Kontrolle über Licht und Privatsphäre.",
     features: ["Präzise Lichtsteuerung", "Langlebig", "Verschiedene Materialien", "Einfache Bedienung"],
+    image: "/jalousien.png",
   },
   {
     title: "Rollos",
     description: "Schlicht und funktional. Rollos sind ideal für alle, die einen zurückhaltenden Sonnenschutz bevorzugen.",
     features: ["Vielseitig einsetzbar", "Verdunkelung möglich", "Große Stoffauswahl", "Kompakt"],
+    image: "/rollos.png",
   },
   {
     title: "Lamellenvorhänge",
     description: "Perfekt für große Fensterflächen und Schiebetüren. Lamellenvorhänge vereinen Funktionalität mit elegantem Design.",
     features: ["Für große Flächen", "Elegantes Design", "Flexibel", "Blendschutz"],
+    image: "/lamellenvorhaenge.png",
   },
 ];
 
@@ -76,7 +81,7 @@ export default function Sonnenschutz() {
                 <div className={index % 2 === 1 ? "md:order-2" : ""}>
                   <div className="aspect-[4/3] rounded-xl overflow-hidden bg-muted">
                     <img
-                      src="/placeholder.svg"
+                      src={product.image}
                       alt={`${product.title} Sonnenschutz in Kreuzau`}
                       className="w-full h-full object-cover"
                       loading="lazy"

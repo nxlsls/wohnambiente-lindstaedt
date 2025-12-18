@@ -71,7 +71,7 @@ export default function Gardinen() {
             </div>
             <div className="aspect-[4/3] rounded-xl overflow-hidden bg-muted">
               <img
-                src="/placeholder.svg"
+                src="/gardinen.png"
                 alt="Maßgefertigte Gardinen in Kreuzau"
                 className="w-full h-full object-cover"
               />
