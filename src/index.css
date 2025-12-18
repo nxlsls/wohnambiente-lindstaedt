@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Wohnambiente Lindstädt Brand Colors from Logo */
+    --background: 0 0% 99%;
+    --foreground: 220 25% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 18%;
+
+    /* Primary: Dark Navy Blue from logo #041424 */
+    --primary: 210 80% 8%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary: Light warm gray */
+    --secondary: 40 15% 96%;
+    --secondary-foreground: 220 25% 18%;
+
+    /* Muted: Soft neutral */
+    --muted: 210 20% 96%;
+    --muted-foreground: 220 15% 45%;
+
+    /* Accent: Turquoise/Mint from logo */
+    --accent: 165 45% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 165 45% 50%;
+
+    --radius: 0.5rem;
+
+    /* Custom brand tokens */
+    --brand-navy: 210 80% 8%;
+    --brand-mint: 165 45% 50%;
+    --brand-mint-light: 165 40% 92%;
+    --brand-gray: 210 15% 45%;
+    --brand-warm: 40 30% 97%;
+
+    /* Typography */
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(210 80% 8% / 0.08);
+    --shadow-card: 0 8px 30px -8px hsl(210 80% 8% / 0.1);
+    --shadow-elevated: 0 20px 50px -15px hsl(210 80% 8% / 0.15);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 25% 12%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 25% 15%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 25% 15%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 165 45% 50%;
+    --primary-foreground: 220 30% 15%;
+
+    --secondary: 220 20% 20%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 210 15% 65%;
+
+    --accent: 165 45% 50%;
+    --accent-foreground: 220 30% 15%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 20% 25%;
+    --input: 220 20% 25%;
+    --ring: 165 45% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    @apply text-primary font-medium tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl leading-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl leading-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  p {
+    @apply text-foreground/90;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-mint {
+    background: linear-gradient(135deg, hsl(var(--brand-mint)) 0%, hsl(165 50% 45%) 100%);
+  }
+
+  .gradient-navy {
+    background: linear-gradient(135deg, hsl(var(--brand-navy)) 0%, hsl(220 35% 28%) 100%);
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

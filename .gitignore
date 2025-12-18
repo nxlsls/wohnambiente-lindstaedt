@@ -1,0 +1,54 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables
+.env
+.env.local
+.env.production.local
+.env.development.local
+
+# Build outputs
+build
+*.tsbuildinfo
+
+# Exclude everything except project files
+/*
+!/src
+!/public
+!package.json
+!package-lock.json
+!vite.config.ts
+!tsconfig.json
+!tsconfig.app.json
+!tsconfig.node.json
+!index.html
+!postcss.config.js
+!tailwind.config.ts
+!eslint.config.js
+!components.json
+!README.md
+!.gitignore
+!.github
+
