@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
 import { ContactForm } from "@/components/sections/ContactForm";
+import { CallbackForm } from "@/components/sections/CallbackForm";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export default function Kontakt() {
@@ -32,12 +33,12 @@ export default function Kontakt() {
             {/* Contact Info */}
             <div className="lg:col-span-1 space-y-8">
               <div>
-                <h2 className="text-2xl mb-6">So erreichen Sie uns</h2>
+                <h2 className="text-2xl mb-6">So erreichen Sie mich</h2>
                 <ul className="space-y-6">
                   <li>
-                    <a 
-                      href="https://maps.google.com/?q=Hoeschstraße+2,+52372+Kreuzau" 
-                      target="_blank" 
+                    <a
+                      href="https://maps.google.com/?q=Hoeschstraße+2,+52372+Kreuzau"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-start gap-4 group"
                     >
@@ -54,8 +55,8 @@ export default function Kontakt() {
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="tel:02422504344" 
+                    <a
+                      href="tel:02422504344"
                       className="flex items-start gap-4 group"
                     >
                       <div className="p-3 rounded-lg bg-accent/10 text-accent">
@@ -63,14 +64,14 @@ export default function Kontakt() {
                       </div>
                       <div>
                         <p className="font-medium text-lg group-hover:text-accent transition-colors">Telefon</p>
-                        <p className="text-muted-foreground">02422 / 504344</p>
+                        <p className="text-muted-foreground text-lg font-semibold">02422 / 504344</p>
                         <p className="text-muted-foreground">0178 / 5917038</p>
                       </div>
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="mailto:info@wohnambiente-lindstaedt.de" 
+                    <a
+                      href="mailto:info@wohnambiente-lindstaedt.de"
                       className="flex items-start gap-4 group"
                     >
                       <div className="p-3 rounded-lg bg-accent/10 text-accent">
@@ -93,6 +94,9 @@ export default function Kontakt() {
                   </li>
                 </ul>
               </div>
+
+              {/* Callback Form */}
+              <CallbackForm />
             </div>
 
             {/* Contact Form */}

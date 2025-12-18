@@ -1,6 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
-import { Award, Heart, Users, Clock, CheckCircle } from "lucide-react";
+import { Award, Heart, Users, Clock, CheckCircle, Shield, BadgeCheck, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -165,6 +165,62 @@ export default function UeberMich() {
         </div>
       </section>
 
+      {/* Qualifikationen & Garantie */}
+      <section className="section-padding bg-secondary">
+        <div className="container-wide">
+          <h2 className="text-center mb-4">Qualität, die überzeugt</h2>
+          <p className="text-center text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Als Raumausstattermeisterin stehe ich für höchste Qualitätsstandards und faire Konditionen.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Meisterbrief */}
+            <div className="bg-background p-8 rounded-xl shadow-card text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 text-accent mb-4">
+                <Award className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl mb-3">Meisterbrief</h3>
+              <p className="text-muted-foreground">
+                Seit 2001 geprüfte Raumausstattermeisterin – Ihr Garant für fachgerechte Ausführung und fundierte Beratung.
+              </p>
+            </div>
+
+            {/* Garantie */}
+            <div className="bg-background p-8 rounded-xl shadow-card text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 text-accent mb-4">
+                <Shield className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl mb-3">Gewährleistung</h3>
+              <p className="text-muted-foreground">
+                Auf alle meine Arbeiten erhalten Sie die gesetzliche Gewährleistung. Ihre Zufriedenheit ist mein Anspruch.
+              </p>
+            </div>
+
+            {/* Qualitätsprodukte */}
+            <div className="bg-background p-8 rounded-xl shadow-card text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 text-accent mb-4">
+                <BadgeCheck className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl mb-3">Markenqualität</h3>
+              <p className="text-muted-foreground">
+                Ich arbeite ausschließlich mit hochwertigen Markenprodukten namhafter Hersteller wie Warema, Neher und MHZ.
+              </p>
+            </div>
+          </div>
+
+          {/* Garantie-Hinweis */}
+          <div className="mt-12 bg-accent/10 rounded-xl p-8 text-center max-w-3xl mx-auto">
+            <Sparkles className="h-8 w-8 text-accent mx-auto mb-4" />
+            <h3 className="text-xl mb-3">Mein Qualitätsversprechen</h3>
+            <p className="text-muted-foreground">
+              Saubere Arbeit, pünktliche Lieferung und faire Preise – das ist mein Versprechen an Sie.
+              Sollte einmal etwas nicht zu Ihrer Zufriedenheit sein, finden wir gemeinsam eine Lösung.
+              Dafür stehe ich mit meinem Namen.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="section-padding gradient-navy text-primary-foreground">
         <div className="container-wide text-center">
@@ -172,7 +228,7 @@ export default function UeberMich() {
             Lernen Sie mich persönlich kennen
           </h2>
           <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-            Ich freue mich darauf, Sie kennenzulernen und gemeinsam Ihr Projekt zu besprechen. 
+            Ich freue mich darauf, Sie kennenzulernen und gemeinsam Ihr Projekt zu besprechen.
             Rufen Sie mich an oder schreiben Sie mir – ich bin gerne für Sie da.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -8,6 +8,13 @@
     <meta name="author" content="Wohnambiente Lindstädt" />
     <meta name="geo.region" content="DE-NW" />
     <meta name="geo.placename" content="Kreuzau" />
+
+    <!-- Preconnect for external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="dns-prefetch" href="https://www.google.com" />
+    <link rel="dns-prefetch" href="https://maps.googleapis.com" />
     
     <title>Wohnambiente Lindstädt – Raumausstattung in Kreuzau</title>
     <meta name="description" content="Wohnambiente Lindstädt – Ihr Fachbetrieb für Insektenschutz, Sonnenschutz, Gardinen und Polsterarbeiten in Kreuzau und Umgebung." />
@@ -24,29 +31,91 @@
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
+      "@id": "https://wohnambiente-lindstaedt.de/#business",
       "name": "Wohnambiente Lindstädt",
-      "description": "Fachbetrieb für Raumausstattung, Insektenschutz, Sonnenschutz, Gardinen und Polsterarbeiten in Kreuzau",
+      "alternateName": "Wohnambiente Lindstaedt",
+      "description": "Fachbetrieb für Raumausstattung, Insektenschutz, Sonnenschutz, Gardinen und Polsterarbeiten in Kreuzau. Meisterqualität seit 2001.",
+      "image": "https://wohnambiente-lindstaedt.de/logo.png",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Hoeschstraße 2",
         "addressLocality": "Kreuzau",
+        "addressRegion": "Nordrhein-Westfalen",
         "postalCode": "52372",
         "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "50.746",
+        "longitude": "6.484"
       },
       "telephone": "+49-2422-504344",
       "email": "info@wohnambiente-lindstaedt.de",
       "url": "https://wohnambiente-lindstaedt.de",
       "priceRange": "$$",
-      "areaServed": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": "50.746",
-          "longitude": "6.484"
-        },
-        "geoRadius": "50000"
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Überweisung, EC-Karte, Bar",
+      "founder": {
+        "@type": "Person",
+        "name": "Verena Lindstädt",
+        "jobTitle": "Raumausstattermeisterin"
       },
-      "serviceType": ["Raumausstattung", "Insektenschutz", "Sonnenschutz", "Gardinen", "Polsterei"]
+      "foundingDate": "2005",
+      "areaServed": [
+        { "@type": "City", "name": "Kreuzau" },
+        { "@type": "City", "name": "Düren" },
+        { "@type": "City", "name": "Jülich" },
+        { "@type": "City", "name": "Nideggen" },
+        { "@type": "City", "name": "Heimbach" },
+        { "@type": "City", "name": "Vettweiß" },
+        { "@type": "City", "name": "Langerwehe" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Raumausstattung Leistungen",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Insektenschutz",
+              "description": "Spannrahmen, Drehrahmen, Pendeltüren, Schiebetüren und Lichtschachtabdeckungen"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sonnenschutz",
+              "description": "Plissees, Wabenplissees, Jalousien, Rollos und Lamellenvorhänge"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gardinen",
+              "description": "Maßgefertigte Gardinen mit persönlicher Beratung und professioneller Montage"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Polsterei",
+              "description": "Neubezug von Möbeln, Polsterarbeiten und Restaurierung"
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "24",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "sameAs": []
     }
     </script>
   </head>

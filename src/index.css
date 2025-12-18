@@ -70,35 +70,6 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .dark {
-    --background: 220 25% 12%;
-    --foreground: 0 0% 95%;
-
-    --card: 220 25% 15%;
-    --card-foreground: 0 0% 95%;
-
-    --popover: 220 25% 15%;
-    --popover-foreground: 0 0% 95%;
-
-    --primary: 165 45% 50%;
-    --primary-foreground: 220 30% 15%;
-
-    --secondary: 220 20% 20%;
-    --secondary-foreground: 0 0% 95%;
-
-    --muted: 220 20% 18%;
-    --muted-foreground: 210 15% 65%;
-
-    --accent: 165 45% 50%;
-    --accent-foreground: 220 30% 15%;
-
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 220 20% 25%;
-    --input: 220 20% 25%;
-    --ring: 165 45% 50%;
-  }
 }
 
 @layer base {
@@ -191,6 +162,23 @@
     }
     to {
       opacity: 1;
+    }
+  }
+
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-up,
+    .animate-fade-in {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
     }
   }
 }
