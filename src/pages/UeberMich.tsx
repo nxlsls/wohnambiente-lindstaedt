@@ -66,10 +66,10 @@ export default function UeberMich() {
             </div>
             <div className="flex justify-center">
               <div className="relative">
-                {/* Photo placeholder */}
+                {/* Photo */}
                 <div className="w-72 h-72 md:w-80 md:h-80 rounded-2xl bg-muted overflow-hidden shadow-elevated">
-                  <img 
-                    src="/placeholder.svg" 
+                  <img
+                    src="/ueber-mich.jfif"
                     alt="Verena Lindstädt - Raumausstattermeisterin"
                     className="w-full h-full object-cover"
                   />
