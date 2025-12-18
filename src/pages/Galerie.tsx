@@ -10,27 +10,27 @@ const galleryCategories = [
     title: "Sonnenschutz",
     href: "/sonnenschutz",
     images: [
-      { src: "/placeholder.svg", alt: "Plissee in modernem Wohnzimmer" },
-      { src: "/placeholder.svg", alt: "Jalousien im Schlafzimmer" },
-      { src: "/placeholder.svg", alt: "Rollo in der Küche" },
+      { src: "/plissee-normal.png", alt: "Plissee in modernem Wohnzimmer" },
+      { src: "/jalousien.png", alt: "Jalousien im Schlafzimmer" },
+      { src: "/rollos.png", alt: "Rollo in der Küche" },
     ],
   },
   {
     title: "Insektenschutz",
     href: "/insektenschutz",
     images: [
-      { src: "/placeholder.svg", alt: "Spannrahmen am Fenster" },
-      { src: "/placeholder.svg", alt: "Drehrahmen an der Terrassentür" },
-      { src: "/placeholder.svg", alt: "Pendeltür im Eingangsbereich" },
+      { src: "/insektenschutz-spannrahmen.jpg", alt: "Spannrahmen am Fenster" },
+      { src: "/insektenschutz-drehrahmen.jpg", alt: "Drehrahmen an der Terrassentür" },
+      { src: "/insektenschutz-pendeltuer.jpg", alt: "Pendeltür im Eingangsbereich" },
     ],
   },
   {
     title: "Gardinen",
     href: "/gardinen",
     images: [
-      { src: "/placeholder.svg", alt: "Elegante Gardinen im Wohnzimmer" },
-      { src: "/placeholder.svg", alt: "Vorhänge im Schlafzimmer" },
-      { src: "/placeholder.svg", alt: "Gardinen mit Raffhalter" },
+      { src: "/gardinen.png", alt: "Elegante Gardinen im Wohnzimmer" },
+      { src: "/gardinen.png", alt: "Vorhänge im Schlafzimmer" },
+      { src: "/gardinen.png", alt: "Gardinen mit Raffhalter" },
     ],
   },
   {
