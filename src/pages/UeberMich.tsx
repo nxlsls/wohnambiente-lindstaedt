@@ -4,6 +4,8 @@ import { Award, Heart, Users, Clock, CheckCircle, Shield, BadgeCheck, Sparkles }
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const milestones = [
   { year: "2001", text: "Meisterprüfung als Raumausstatterin" },
   { year: "2005", text: "Gründung von Wohnambiente Lindstädt" },
@@ -68,8 +70,8 @@ export default function UeberMich() {
               <div className="relative">
                 {/* Photo placeholder */}
                 <div className="w-72 h-72 md:w-80 md:h-80 rounded-2xl bg-muted overflow-hidden shadow-elevated">
-                  <img 
-                    src="/placeholder.svg" 
+                  <img
+                    src={`${baseUrl}placeholder.svg`}
                     alt="Verena Lindstädt - Raumausstattermeisterin"
                     className="w-full h-full object-cover"
                   />

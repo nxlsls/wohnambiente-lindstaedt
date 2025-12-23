@@ -4,13 +4,15 @@ import { SEOHead } from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Grid, Sun, Home, Sofa } from "lucide-react";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const leistungen = [
   {
     title: "Insektenschutz",
     description: "Hochwertige Insektenschutzlösungen für Fenster und Türen. Spannrahmen, Drehrahmen, Pendeltüren, Schiebetüren und Lichtschachtabdeckungen.",
     href: "/insektenschutz",
     icon: Grid,
-    image: "/placeholder.svg",
+    image: `${baseUrl}placeholder.svg`,
     items: ["Spannrahmen", "Drehrahmen", "Pendeltüren", "Schiebetüren", "Lichtschachtabdeckungen"],
   },
   {
@@ -18,7 +20,7 @@ const leistungen = [
     description: "Optimaler Licht- und Wärmeschutz für Ihre Räume. Plissees, Wabenplissees, Jalousien, Rollos und Lamellenvorhänge.",
     href: "/sonnenschutz",
     icon: Sun,
-    image: "/placeholder.svg",
+    image: `${baseUrl}placeholder.svg`,
     items: ["Plissees", "Wabenplissees", "Jalousien", "Rollos", "Lamellenvorhänge"],
   },
   {
@@ -26,7 +28,7 @@ const leistungen = [
     description: "Maßgefertigte Gardinen mit persönlicher Beratung, präzisem Aufmaß und professioneller Montage.",
     href: "/gardinen",
     icon: Home,
-    image: "/placeholder.svg",
+    image: `${baseUrl}placeholder.svg`,
     items: ["Maßanfertigung", "Beratung vor Ort", "Aufmaß", "Montage"],
   },
   {
@@ -34,7 +36,7 @@ const leistungen = [
     description: "Professionelle Polsterarbeiten und Neubezug von Möbeln. Ich gebe Ihren Lieblingsstücken neues Leben.",
     href: "/polsterei",
     icon: Sofa,
-    image: "/placeholder.svg",
+    image: `${baseUrl}placeholder.svg`,
     items: ["Polsterarbeiten", "Neubezug von Möbeln", "Reparaturen"],
   },
 ];

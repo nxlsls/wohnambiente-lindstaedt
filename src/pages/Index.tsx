@@ -6,33 +6,35 @@ import { ServiceCard } from "@/components/sections/ServiceCard";
 import { ArrowRight, Phone, Shield, Sun, Sofa, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-living-room.jpg";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const services = [
   {
     title: "Insektenschutz",
     description: "Spannrahmen, Drehrahmen, Pendeltüren und Schiebetüren – passgenau für Ihre Fenster und Türen.",
     href: "/insektenschutz",
-    image: "/insektenschutz-servicecard.png",
+    image: `${baseUrl}insektenschutz-servicecard.png`,
     imageAlt: "Insektenschutz Fliegengitter am Fenster",
   },
   {
     title: "Sonnenschutz",
     description: "Plissees, Jalousien, Rollos und Lamellenvorhänge für optimalen Licht- und Wärmeschutz.",
     href: "/sonnenschutz",
-    image: "/sonnenschutz-servicecard.png",
+    image: `${baseUrl}sonnenschutz-servicecard.png`,
     imageAlt: "Sonnenschutz Plissee im Wohnzimmer",
   },
   {
     title: "Gardinen",
     description: "Maßgefertigte Gardinen mit persönlicher Beratung, Aufmaß und professioneller Montage.",
     href: "/gardinen",
-    image: "/gardinen-servicecard.png",
+    image: `${baseUrl}gardinen-servicecard.png`,
     imageAlt: "Elegante Gardinen im Wohnraum",
   },
   {
     title: "Polsterei",
     description: "Professionelle Polsterarbeiten und Neubezug – wir geben Ihren Möbeln neues Leben.",
     href: "/polsterei",
-    image: "/placeholder.svg",
+    image: `${baseUrl}placeholder.svg`,
     imageAlt: "Polsterarbeiten Sofa neu beziehen",
   },
 ];

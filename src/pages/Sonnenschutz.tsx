@@ -5,36 +5,38 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Phone } from "lucide-react";
 import { FAQ, sonnenschutzFAQs } from "@/components/sections/FAQ";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const products = [
   {
     title: "Plissees",
     description: "Flexible Sonnenschutzlösungen, die sich stufenlos einstellen lassen. Perfekt für unterschiedliche Lichtstimmungen.",
     features: ["Stufenlos einstellbar", "Große Farbauswahl", "Für alle Fensterformen", "Pflegeleicht"],
-    image: "/plissee-normal.png",
+    image: `${baseUrl}plissee-normal.png`,
   },
   {
     title: "Wabenplissees",
     description: "Die Wabenstruktur sorgt für hervorragende Wärmedämmung im Winter und Hitzeschutz im Sommer.",
     features: ["Wärmedämmend", "Energiesparend", "Lärmdämmend", "Modernes Design"],
-    image: "/plissee-normal.png",
+    image: `${baseUrl}plissee-normal.png`,
   },
   {
     title: "Jalousien",
     description: "Der Klassiker unter den Sonnenschutzlösungen. Jalousien bieten präzise Kontrolle über Licht und Privatsphäre.",
     features: ["Präzise Lichtsteuerung", "Langlebig", "Verschiedene Materialien", "Einfache Bedienung"],
-    image: "/jalousien.png",
+    image: `${baseUrl}jalousien.png`,
   },
   {
     title: "Rollos",
     description: "Schlicht und funktional. Rollos sind ideal für alle, die einen zurückhaltenden Sonnenschutz bevorzugen.",
     features: ["Vielseitig einsetzbar", "Verdunkelung möglich", "Große Stoffauswahl", "Kompakt"],
-    image: "/rollos.png",
+    image: `${baseUrl}rollos.png`,
   },
   {
     title: "Lamellenvorhänge",
     description: "Perfekt für große Fensterflächen und Schiebetüren. Lamellenvorhänge vereinen Funktionalität mit elegantem Design.",
     features: ["Für große Flächen", "Elegantes Design", "Flexibel", "Blendschutz"],
-    image: "/lamellenvorhaenge.png",
+    image: `${baseUrl}lamellenvorhaenge.png`,
   },
 ];
 
