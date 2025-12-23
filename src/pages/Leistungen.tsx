@@ -12,7 +12,7 @@ const leistungen = [
     description: "Hochwertige Insektenschutzlösungen für Fenster und Türen. Spannrahmen, Drehrahmen, Pendeltüren, Schiebetüren und Lichtschachtabdeckungen.",
     href: "/insektenschutz",
     icon: Grid,
-    image: `${baseUrl}placeholder.svg`,
+    image: "/insektenschutz-servicecard.png",
     items: ["Spannrahmen", "Drehrahmen", "Pendeltüren", "Schiebetüren", "Lichtschachtabdeckungen"],
   },
   {
@@ -20,7 +20,7 @@ const leistungen = [
     description: "Optimaler Licht- und Wärmeschutz für Ihre Räume. Plissees, Wabenplissees, Jalousien, Rollos und Lamellenvorhänge.",
     href: "/sonnenschutz",
     icon: Sun,
-    image: `${baseUrl}placeholder.svg`,
+    image: "/sonnenschutz-servicecard.png",
     items: ["Plissees", "Wabenplissees", "Jalousien", "Rollos", "Lamellenvorhänge"],
   },
   {
@@ -28,7 +28,7 @@ const leistungen = [
     description: "Maßgefertigte Gardinen mit persönlicher Beratung, präzisem Aufmaß und professioneller Montage.",
     href: "/gardinen",
     icon: Home,
-    image: `${baseUrl}placeholder.svg`,
+    image: "/gardinen-servicecard.png",
     items: ["Maßanfertigung", "Beratung vor Ort", "Aufmaß", "Montage"],
   },
   {

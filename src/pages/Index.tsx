@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
 import { ServiceCard } from "@/components/sections/ServiceCard";
 import { ArrowRight, Phone, Shield, Sun, Sofa, Sparkles } from "lucide-react";
-import heroImage from "@/assets/hero-living-room.jpg";
 
 const baseUrl = import.meta.env.BASE_URL;
 
@@ -63,6 +63,21 @@ const benefits = [
 ];
 
 export default function Index() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handleLoadedData = () => {
+      setIsVideoLoaded(true);
+    };
+
+    video.addEventListener('loadeddata', handleLoadedData);
+    return () => video.removeEventListener('loadeddata', handleLoadedData);
+  }, []);
+
   return (
     <Layout>
       <SEOHead
@@ -72,13 +87,20 @@ export default function Index() {
       />
 
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center">
+      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img
-            src={heroImage}
-            alt="Wohnambiente mit eleganten Gardinen und Sonnenschutz in Kreuzau"
-            className="w-full h-full object-cover"
-          />
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className={`w-full h-full object-cover transition-opacity duration-1000 ${
+              isVideoLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <source src="/HeroSectionWL.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
         </div>
         
