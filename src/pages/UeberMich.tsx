@@ -4,6 +4,8 @@ import { Award, Heart, Users, Clock, CheckCircle, Shield, BadgeCheck, Sparkles }
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const milestones = [
   { year: "2001", text: "Meisterprüfung als Raumausstatterin" },
   { year: "2005", text: "Gründung von Wohnambiente Lindstädt" },

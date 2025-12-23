@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Phone } from "lucide-react";
 import { FAQ, polstereiFAQs } from "@/components/sections/FAQ";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const services = [
   {
     title: "Neubezug von Möbeln",
@@ -69,8 +71,8 @@ export default function Polsterei() {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="aspect-[16/10] bg-muted">
-                  <img 
-                    src="/placeholder.svg" 
+                  <img
+                    src={`${baseUrl}placeholder.svg`}
                     alt={`${service.title} - Polsterei Kreuzau`}
                     className="w-full h-full object-cover"
                   />
@@ -91,7 +93,7 @@ export default function Polsterei() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="aspect-[4/3] rounded-xl overflow-hidden bg-muted">
               <img
-                src="/placeholder.svg"
+                src={`${baseUrl}placeholder.svg`}
                 alt="Polsterarbeiten Sofa Neubezug in Kreuzau"
                 className="w-full h-full object-cover"
               />

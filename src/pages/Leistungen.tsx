@@ -4,6 +4,8 @@ import { SEOHead } from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Grid, Sun, Home, Sofa } from "lucide-react";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const leistungen = [
   {
     title: "Insektenschutz",
@@ -34,7 +36,7 @@ const leistungen = [
     description: "Professionelle Polsterarbeiten und Neubezug von Möbeln. Ich gebe Ihren Lieblingsstücken neues Leben.",
     href: "/polsterei",
     icon: Sofa,
-    image: "/placeholder.svg",
+    image: `${baseUrl}placeholder.svg`,
     items: ["Polsterarbeiten", "Neubezug von Möbeln", "Reparaturen"],
   },
 ];

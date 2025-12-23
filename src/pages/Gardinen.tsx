@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Phone } from "lucide-react";
 import { FAQ, gardinenFAQs } from "@/components/sections/FAQ";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const features = [
   "Persönliche Beratung bei Ihnen zu Hause",
   "Große Auswahl an Stoffen und Designs",
@@ -71,7 +73,7 @@ export default function Gardinen() {
             </div>
             <div className="aspect-[4/3] rounded-xl overflow-hidden bg-muted">
               <img
-                src="/gardinen.png"
+                src={`${baseUrl}gardinen.png`}
                 alt="Maßgefertigte Gardinen in Kreuzau"
                 className="w-full h-full object-cover"
               />

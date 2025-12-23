@@ -5,40 +5,42 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Phone } from "lucide-react";
 import { FAQ, insektenschutzFAQs } from "@/components/sections/FAQ";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const products = [
   {
     title: "Spannrahmen",
     description: "Der Klassiker für Fenster. Spannrahmen lassen sich einfach einsetzen und herausnehmen – ideal für die regelmäßige Reinigung.",
     features: ["Einfache Montage", "Hohe Stabilität", "Passgenau gefertigt", "Leichte Reinigung"],
-    image: "/insektenschutz-spannrahmen.jpg",
+    image: `${baseUrl}insektenschutz-spannrahmen.jpg`,
     imageAlt: "Spannrahmen Insektenschutz am Küchenfenster",
   },
   {
     title: "Drehrahmen",
     description: "Perfekt für Fenster, die regelmäßig geöffnet werden. Der Drehrahmen lässt sich zur Seite schwenken.",
     features: ["Schwenkbar", "Selbstschließend", "Robust", "Langlebig"],
-    image: "/insektenschutz-drehrahmen.jpg",
+    image: `${baseUrl}insektenschutz-drehrahmen.jpg`,
     imageAlt: "Drehrahmen Insektenschutz an Balkontür",
   },
   {
     title: "Pendeltüren",
     description: "Die ideale Lösung für Balkontüren und Terrassentüren. Pendeltüren schließen automatisch und ermöglichen freies Durchgehen.",
     features: ["Automatisches Schließen", "Beidseitig begehbar", "Magnetverschluss", "Barrierefrei"],
-    image: "/insektenschutz-pendeltuer.jpg",
+    image: `${baseUrl}insektenschutz-pendeltuer.jpg`,
     imageAlt: "Pendeltür Insektenschutz an Terrassentür",
   },
   {
     title: "Schiebetüren",
     description: "Platzsparend und elegant. Schiebetüren gleiten sanft zur Seite und sind ideal für große Öffnungen.",
     features: ["Platzsparend", "Elegantes Design", "Leichtgängig", "Große Durchgänge"],
-    image: "/insektenschutz-schiebetuer.jpg",
+    image: `${baseUrl}insektenschutz-schiebetuer.jpg`,
     imageAlt: "Schiebetür Insektenschutz an großer Terrassentür",
   },
   {
     title: "Lichtschachtabdeckungen",
     description: "Schützen Sie Ihre Kellerfenster und Lichtschächte zuverlässig vor Insekten und Schmutz.",
     features: ["Wetterfest", "Stabil", "Einfache Montage", "Dauerhafter Schutz"],
-    image: "/insektenschutz-lichtschacht.jpg",
+    image: `${baseUrl}insektenschutz-lichtschacht.jpg`,
     imageAlt: "Lichtschachtabdeckung Insektenschutz",
   },
 ];
