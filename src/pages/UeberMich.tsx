@@ -71,7 +71,7 @@ export default function UeberMich() {
                 {/* Photo */}
                 <div className="w-72 h-72 md:w-80 md:h-80 rounded-2xl bg-muted overflow-hidden shadow-elevated">
                   <img
-                    src="/ueber-mich.jfif"
+                    src={`${baseUrl}ueber-mich.jfif`}
                     alt="Verena Lindstädt - Raumausstattermeisterin"
                     className="w-full h-full object-cover"
                   />
