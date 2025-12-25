@@ -3,8 +3,7 @@ import { SEOHead } from "@/components/seo/SEOHead";
 import { Award, Heart, Users, Clock, CheckCircle, Shield, BadgeCheck, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-
-const baseUrl = import.meta.env.BASE_URL;
+import profileImage from "@/assets/ueber-mich/verena-lindstaedt.png";
 
 const milestones = [
   { year: "2001", text: "Meisterprüfung als Raumausstatterin" },
@@ -71,7 +70,7 @@ export default function UeberMich() {
                 {/* Photo */}
                 <div className="w-72 h-72 md:w-80 md:h-80 rounded-2xl bg-muted overflow-hidden shadow-elevated">
                   <img
-                    src={`${baseUrl}ueber-mich.jfif`}
+                    src={profileImage}
                     alt="Verena Lindstädt - Raumausstattermeisterin"
                     className="w-full h-full object-cover"
                   />

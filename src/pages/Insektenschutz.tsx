@@ -4,43 +4,46 @@ import { SEOHead } from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Phone } from "lucide-react";
 import { FAQ, insektenschutzFAQs } from "@/components/sections/FAQ";
-
-const baseUrl = import.meta.env.BASE_URL;
+import spannrahmenImg from "@/assets/insektenschutz/insektenschutz-spannrahmen.jpg";
+import drehrahmenImg from "@/assets/insektenschutz/insektenschutz-drehrahmen.jpg";
+import pendeltuerImg from "@/assets/insektenschutz/insektenschutz-pendeltuer.jpg";
+import schiebetuerImg from "@/assets/insektenschutz/insektenschutz-schiebetuer.jpg";
+import lichtschachtImg from "@/assets/insektenschutz/insektenschutz-lichtschacht.jpg";
 
 const products = [
   {
     title: "Spannrahmen",
     description: "Der Klassiker für Fenster. Spannrahmen lassen sich einfach einsetzen und herausnehmen – ideal für die regelmäßige Reinigung.",
     features: ["Einfache Montage", "Hohe Stabilität", "Passgenau gefertigt", "Leichte Reinigung"],
-    image: `${baseUrl}insektenschutz-spannrahmen.jpg`,
+    image: spannrahmenImg,
     imageAlt: "Spannrahmen Insektenschutz am Küchenfenster",
   },
   {
     title: "Drehrahmen",
     description: "Perfekt für Fenster, die regelmäßig geöffnet werden. Der Drehrahmen lässt sich zur Seite schwenken.",
     features: ["Schwenkbar", "Selbstschließend", "Robust", "Langlebig"],
-    image: `${baseUrl}insektenschutz-drehrahmen.jpg`,
+    image: drehrahmenImg,
     imageAlt: "Drehrahmen Insektenschutz an Balkontür",
   },
   {
     title: "Pendeltüren",
     description: "Die ideale Lösung für Balkontüren und Terrassentüren. Pendeltüren schließen automatisch und ermöglichen freies Durchgehen.",
     features: ["Automatisches Schließen", "Beidseitig begehbar", "Magnetverschluss", "Barrierefrei"],
-    image: `${baseUrl}insektenschutz-pendeltuer.jpg`,
+    image: pendeltuerImg,
     imageAlt: "Pendeltür Insektenschutz an Terrassentür",
   },
   {
     title: "Schiebetüren",
     description: "Platzsparend und elegant. Schiebetüren gleiten sanft zur Seite und sind ideal für große Öffnungen.",
     features: ["Platzsparend", "Elegantes Design", "Leichtgängig", "Große Durchgänge"],
-    image: `${baseUrl}insektenschutz-schiebetuer.jpg`,
+    image: schiebetuerImg,
     imageAlt: "Schiebetür Insektenschutz an großer Terrassentür",
   },
   {
     title: "Lichtschachtabdeckungen",
     description: "Schützen Sie Ihre Kellerfenster und Lichtschächte zuverlässig vor Insekten und Schmutz.",
     features: ["Wetterfest", "Stabil", "Einfache Montage", "Dauerhafter Schutz"],
-    image: `${baseUrl}insektenschutz-lichtschacht.jpg`,
+    image: lichtschachtImg,
     imageAlt: "Lichtschachtabdeckung Insektenschutz",
   },
 ];
