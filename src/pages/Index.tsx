@@ -99,7 +99,7 @@ export default function Index() {
               isVideoLoaded ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <source src="/HeroSectionWL.mp4" type="video/mp4" />
+            <source src={`${baseUrl}HeroSectionWL.mp4`} type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
         </div>
