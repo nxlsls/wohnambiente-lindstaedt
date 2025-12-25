@@ -3,8 +3,10 @@ import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Grid, Sun, Home, Sofa } from "lucide-react";
-
-const baseUrl = import.meta.env.BASE_URL;
+import insektenschutzCard from "@/assets/insektenschutz/insektenschutz-servicecard.png";
+import sonnenschutzCard from "@/assets/sonnenschutz/sonnenschutz-servicecard.png";
+import gardinenCard from "@/assets/gardinen/gardinen-servicecard.png";
+import placeholderImg from "@/assets/shared/placeholder.svg";
 
 const leistungen = [
   {
@@ -12,7 +14,7 @@ const leistungen = [
     description: "Hochwertige Insektenschutzlösungen für Fenster und Türen. Spannrahmen, Drehrahmen, Pendeltüren, Schiebetüren und Lichtschachtabdeckungen.",
     href: "/insektenschutz",
     icon: Grid,
-    image: `${baseUrl}insektenschutz-servicecard.png`,
+    image: insektenschutzCard,
     items: ["Spannrahmen", "Drehrahmen", "Pendeltüren", "Schiebetüren", "Lichtschachtabdeckungen"],
   },
   {
@@ -20,7 +22,7 @@ const leistungen = [
     description: "Optimaler Licht- und Wärmeschutz für Ihre Räume. Plissees, Wabenplissees, Jalousien, Rollos und Lamellenvorhänge.",
     href: "/sonnenschutz",
     icon: Sun,
-    image: `${baseUrl}sonnenschutz-servicecard.png`,
+    image: sonnenschutzCard,
     items: ["Plissees", "Wabenplissees", "Jalousien", "Rollos", "Lamellenvorhänge"],
   },
   {
@@ -28,7 +30,7 @@ const leistungen = [
     description: "Maßgefertigte Gardinen mit persönlicher Beratung, präzisem Aufmaß und professioneller Montage.",
     href: "/gardinen",
     icon: Home,
-    image: `${baseUrl}gardinen-servicecard.png`,
+    image: gardinenCard,
     items: ["Maßanfertigung", "Beratung vor Ort", "Aufmaß", "Montage"],
   },
   {
@@ -36,7 +38,7 @@ const leistungen = [
     description: "Professionelle Polsterarbeiten und Neubezug von Möbeln. Ich gebe Ihren Lieblingsstücken neues Leben.",
     href: "/polsterei",
     icon: Sofa,
-    image: `${baseUrl}placeholder.svg`,
+    image: placeholderImg,
     items: ["Polsterarbeiten", "Neubezug von Möbeln", "Reparaturen"],
   },
 ];

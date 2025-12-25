@@ -4,8 +4,7 @@ import { SEOHead } from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Phone } from "lucide-react";
 import { FAQ, gardinenFAQs } from "@/components/sections/FAQ";
-
-const baseUrl = import.meta.env.BASE_URL;
+import gardinenImg from "@/assets/gardinen/gardinen.png";
 
 const features = [
   "Persönliche Beratung bei Ihnen zu Hause",
@@ -73,7 +72,7 @@ export default function Gardinen() {
             </div>
             <div className="aspect-[4/3] rounded-xl overflow-hidden bg-muted">
               <img
-                src={`${baseUrl}gardinen.png`}
+                src={gardinenImg}
                 alt="Maßgefertigte Gardinen in Kreuzau"
                 className="w-full h-full object-cover"
               />
