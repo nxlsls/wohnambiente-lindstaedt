@@ -8,7 +8,6 @@ const navigation = [
   { name: "Startseite", href: "/" },
   { name: "Über mich", href: "/ueber-mich" },
   { name: "Leistungen", href: "/leistungen" },
-  { name: "Galerie", href: "/galerie" },
   { name: "Partner", href: "/partner" },
   { name: "Kontakt", href: "/kontakt" },
 ];

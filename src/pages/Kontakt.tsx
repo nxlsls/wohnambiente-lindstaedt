@@ -2,14 +2,15 @@ import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { CallbackForm } from "@/components/sections/CallbackForm";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, Clock, MessageCircle, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Kontakt() {
   return (
     <Layout>
       <SEOHead
         title="Kontakt – Raumausstattung in Kreuzau"
-        description="Kontaktieren Sie Wohnambiente Lindstädt in Kreuzau. Wir beraten Sie gerne zu Insektenschutz, Sonnenschutz, Gardinen und Polsterarbeiten."
+        description="Kontaktieren Sie Wohnambiente Lindstädt in Kreuzau. Ich berate Sie gerne zu Insektenschutz, Sonnenschutz, Gardinen und Polsterarbeiten."
         canonical="/kontakt"
       />
 
@@ -36,23 +37,22 @@ export default function Kontakt() {
                 <h2 className="text-2xl mb-6">So erreichen Sie mich</h2>
                 <ul className="space-y-6">
                   <li>
-                    <a
-                      href="https://maps.google.com/?q=Hoeschstraße+2,+52372+Kreuzau"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-start gap-4 group"
-                    >
+                    <div className="flex items-start gap-4">
                       <div className="p-3 rounded-lg bg-accent/10 text-accent">
                         <MapPin className="h-6 w-6" />
                       </div>
                       <div>
-                        <p className="font-medium text-lg group-hover:text-accent transition-colors">Adresse</p>
+                        <p className="font-medium text-lg">Adresse</p>
                         <p className="text-muted-foreground">
                           Hoeschstraße 2<br />
                           52372 Kreuzau
                         </p>
+                        <p className="text-sm text-amber-600 mt-2">
+                          Aktuell im Umbau – Termine zum Stoffe & Muster anschauen
+                          gerne nach Vereinbarung!
+                        </p>
                       </div>
-                    </a>
+                    </div>
                   </li>
                   <li>
                     <a
@@ -66,6 +66,29 @@ export default function Kontakt() {
                         <p className="font-medium text-lg group-hover:text-accent transition-colors">Telefon</p>
                         <p className="text-muted-foreground text-lg font-semibold">02422 / 504344</p>
                         <p className="text-muted-foreground">0178 / 5917038</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://wa.me/491785917038"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-start gap-4 group"
+                    >
+                      <div className="p-3 rounded-lg bg-green-500/10 text-green-600">
+                        <MessageCircle className="h-6 w-6" />
+                      </div>
+                      <div>
+                        <p className="font-medium text-lg group-hover:text-green-600 transition-colors">WhatsApp</p>
+                        <p className="text-muted-foreground">Schreiben Sie mir direkt</p>
+                        <Button
+                          size="sm"
+                          className="mt-2 bg-green-600 hover:bg-green-700"
+                          asChild
+                        >
+                          <span>Chat starten</span>
+                        </Button>
                       </div>
                     </a>
                   </li>

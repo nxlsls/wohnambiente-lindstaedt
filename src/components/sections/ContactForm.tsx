@@ -36,7 +36,7 @@ export function ContactForm() {
       if (result.success) {
         toast({
           title: "Nachricht gesendet",
-          description: "Vielen Dank! Wir melden uns zeitnah bei Ihnen.",
+          description: "Vielen Dank! Ich melde mich zeitnah bei Ihnen.",
         });
         form.reset();
       } else {
@@ -120,7 +120,7 @@ export function ContactForm() {
           name="message"
           required
           rows={6}
-          placeholder="Wie können wir Ihnen helfen?"
+          placeholder="Wie kann ich Ihnen helfen?"
           className="text-base resize-none"
         />
       </div>

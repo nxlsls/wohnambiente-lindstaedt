@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, Clock } from "lucide-react";
 import logoDark from "@/assets/logo-dark.png";
 
 export function Footer() {
@@ -15,9 +15,9 @@ export function Footer() {
               className="h-20 w-auto mb-6"
             />
             <p className="text-primary-foreground/80 text-base leading-relaxed">
-              Verena Lindstädt – Raumausstattermeisterin seit 2001. 
-              Persönliche Beratung für Sonnenschutz, Insektenschutz, Gardinen und Polsterei 
-              in Kreuzau und Umgebung.
+              Wohnambiente Lindstädt – Ihr Fachbetrieb seit 2018.
+              Persönliche Beratung für Sonnenschutz, Insektenschutz, Gardinen und Polsterei
+              in der gesamten Region.
             </p>
           </div>
 
@@ -25,17 +25,6 @@ export function Footer() {
           <div>
             <h3 className="font-heading text-xl mb-6 text-accent">Kontakt</h3>
             <ul className="space-y-4">
-              <li>
-                <a 
-                  href="https://maps.google.com/?q=Hoeschstraße+2,+52372+Kreuzau" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-3 hover:text-accent transition-colors"
-                >
-                  <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
-                  <span>Hoeschstraße 2<br />52372 Kreuzau</span>
-                </a>
-              </li>
               <li>
                 <a 
                   href="tel:02422504344" 
@@ -82,11 +71,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/galerie" className="hover:text-accent transition-colors">
-                  Galerie
-                </Link>
-              </li>
-              <li>
                 <Link to="/partner" className="hover:text-accent transition-colors">
                   Partner
                 </Link>
@@ -104,7 +88,7 @@ export function Footer() {
                   Termine nach Vereinbarung
                 </p>
                 <p className="text-primary-foreground/80 mt-2">
-                  Wir beraten Sie gerne persönlich vor Ort.
+                  Ich berate Sie gerne persönlich vor Ort.
                 </p>
               </div>
             </div>

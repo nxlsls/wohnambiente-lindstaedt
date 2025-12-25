@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
 import { ServiceCard } from "@/components/sections/ServiceCard";
 import { ArrowRight, Phone, Shield, Sun, Sofa, Sparkles } from "lucide-react";
+import heroImage from "@/assets/hero-living-room.jpg";
 
 const baseUrl = import.meta.env.BASE_URL;
 
@@ -32,7 +32,7 @@ const services = [
   },
   {
     title: "Polsterei",
-    description: "Professionelle Polsterarbeiten und Neubezug – wir geben Ihren Möbeln neues Leben.",
+    description: "Professionelle Polsterarbeiten und Neubezug – ich gebe Ihren Möbeln neues Leben.",
     href: "/polsterei",
     image: `${baseUrl}placeholder.svg`,
     imageAlt: "Polsterarbeiten Sofa neu beziehen",
@@ -63,44 +63,22 @@ const benefits = [
 ];
 
 export default function Index() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const handleLoadedData = () => {
-      setIsVideoLoaded(true);
-    };
-
-    video.addEventListener('loadeddata', handleLoadedData);
-    return () => video.removeEventListener('loadeddata', handleLoadedData);
-  }, []);
-
   return (
     <Layout>
       <SEOHead
         title="Raumausstattung in Kreuzau"
-        description="Wohnambiente Lindstädt – Ihr Fachbetrieb für Insektenschutz, Sonnenschutz, Gardinen und Polsterarbeiten in Kreuzau und Umgebung. Persönliche Beratung & Maßanfertigung."
+        description="Wohnambiente Lindstädt – Ihr Fachbetrieb für Insektenschutz, Sonnenschutz, Gardinen und Polsterarbeiten. Persönliche Beratung & Maßanfertigung von Heinsberg bis Bonn."
         canonical="/"
       />
 
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[80vh] flex items-center">
         <div className="absolute inset-0 z-0">
-          <video
-            ref={videoRef}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className={`w-full h-full object-cover transition-opacity duration-1000 ${
-              isVideoLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <source src={`${baseUrl}HeroSectionWL.mp4`} type="video/mp4" />
-          </video>
+          <img
+            src={heroImage}
+            alt="Wohnambiente mit eleganten Gardinen und Sonnenschutz in Kreuzau"
+            className="w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
         </div>
         
@@ -160,7 +138,7 @@ export default function Index() {
             <h2 className="mb-4">Meine Leistungen</h2>
             <p className="text-xl text-muted-foreground">
               Von Insektenschutz bis Polsterei – ich biete Ihnen individuelle Lösungen 
-              für ein schöneres Zuhause in Kreuzau und Umgebung.
+              für ein schöneres Zuhause in der gesamten Region.
             </p>
           </div>
           
@@ -187,7 +165,7 @@ export default function Index() {
           </h2>
           <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-8">
             Ich komme zu Ihnen – für eine unverbindliche Beratung und
-            präzises Aufmaß direkt bei Ihnen zu Hause in Kreuzau und Umgebung.
+            präzises Aufmaß direkt bei Ihnen zu Hause. Von Heinsberg bis Bonn, von Düsseldorf bis in die Eifel.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" asChild>
@@ -204,11 +182,11 @@ export default function Index() {
       <section className="section-padding bg-brand-warm">
         <div className="container-wide">
           <div className="max-w-4xl mx-auto">
-            <h2 className="mb-6">Raumausstattung in Kreuzau – Ihr Partner für Wohnqualität</h2>
+            <h2 className="mb-6">Raumausstattung in Kreuzau – Ihr Fachbetrieb seit 2018</h2>
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p>
                 <strong>Wohnambiente Lindstädt</strong> – das bin ich, Verena Lindstädt,
-                Raumausstattermeisterin seit 2001. Mein Betrieb in Kreuzau steht für
+                Raumausstattermeisterin. Mein Fachbetrieb in Kreuzau steht für
                 persönliche Beratung und handwerkliche Qualität bei Insektenschutz,
                 Sonnenschutz, Gardinen und Polsterarbeiten.
               </p>
@@ -218,13 +196,14 @@ export default function Index() {
                 und finde gemeinsam mit Ihnen die beste Lösung für Ihr Zuhause.
               </p>
               <p>
-                Als Raumausstatterin bin ich für Kunden aus <strong>Kreuzau</strong>, <strong>Düren</strong>, <strong>Jülich</strong>, <strong>Nideggen</strong>, <strong>Heimbach</strong>, <strong>Vettweiß</strong>, <strong>Langerwehe</strong> und der gesamten Region tätig.
-                Gerne komme ich auch zu Ihnen nach Hause für eine unverbindliche Beratung vor Ort.
+                Als Raumausstatterin bin ich in einem großen Einzugsgebiet für Sie unterwegs:
+                Von <strong>Heinsberg</strong> über <strong>Düsseldorf</strong> und <strong>Remscheid</strong> bis
+                nach <strong>Bonn</strong> und in die <strong>Eifel</strong>. Natürlich auch in <strong>Kreuzau</strong>, <strong>Düren</strong>, <strong>Jülich</strong> und allen umliegenden Orten.
+                Gerne komme ich zu Ihnen nach Hause für eine unverbindliche Beratung vor Ort.
               </p>
               <p>
-                Besuchen Sie mich in der Hoeschstraße 2 in 52372 Kreuzau oder rufen Sie an
-                unter <a href="tel:02422504344" className="text-accent hover:underline">02422 / 504344</a>.
-                Ich freue mich auf Ihre Anfrage!
+                Rufen Sie mich an unter <a href="tel:02422504344" className="text-accent hover:underline">02422 / 504344</a> oder
+                schreiben Sie mir – ich freue mich auf Ihre Anfrage!
               </p>
             </div>
           </div>

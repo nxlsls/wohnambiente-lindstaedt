@@ -10,15 +10,15 @@ const baseUrl = import.meta.env.BASE_URL;
 const services = [
   {
     title: "Neubezug von Möbeln",
-    description: "Ihr Lieblingssofa hat schon bessere Tage gesehen? Wir geben ihm mit einem neuen Bezug neues Leben. Wählen Sie aus einer großen Auswahl hochwertiger Stoffe.",
+    description: "Ihr Lieblingssofa hat schon bessere Tage gesehen? Ich gebe ihm mit einem neuen Bezug neues Leben. Wählen Sie aus einer großen Auswahl hochwertiger Stoffe.",
   },
   {
     title: "Polsterarbeiten",
-    description: "Vom Austausch der Polsterung bis zur Reparatur von Rahmen und Federn – wir kümmern uns um alle Aspekte Ihrer Polstermöbel.",
+    description: "Vom Austausch der Polsterung bis zur Reparatur von Rahmen und Federn – ich kümmere mich um alle Aspekte Ihrer Polstermöbel.",
   },
   {
     title: "Restaurierung",
-    description: "Antike Möbel verdienen besondere Aufmerksamkeit. Wir restaurieren Ihre wertvollen Stücke fachgerecht und mit Liebe zum Detail.",
+    description: "Antike Möbel verdienen besondere Aufmerksamkeit. Ich restauriere Ihre wertvollen Stücke fachgerecht und mit Liebe zum Detail.",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function Polsterei() {
             </nav>
             <h1 className="text-primary-foreground mb-6">Polsterei</h1>
             <p className="text-xl text-primary-foreground/90 leading-relaxed">
-              Professionelle Polsterarbeiten in Kreuzau und Umgebung. Ich gebe Ihren 
+              Professionelle Polsterarbeiten in der gesamten Region. Ich gebe Ihren 
               Lieblingsstücken neues Leben – durch Neubezug, Reparatur oder Restaurierung.
             </p>
           </div>
@@ -131,7 +131,7 @@ export default function Polsterei() {
           <h2 className="mb-4">Möbel aufpolstern lassen?</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
             Kontaktieren Sie mich für ein unverbindliches Angebot.
-            Ich berate Sie gerne in Kreuzau, Düren, Jülich und Umgebung!
+            Ich berate Sie gerne – von Heinsberg bis Bonn, von Düsseldorf bis in die Eifel!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
