@@ -202,9 +202,8 @@ export default function Index() {
                 Gerne komme ich zu Ihnen nach Hause für eine unverbindliche Beratung vor Ort.
               </p>
               <p>
-                Besuchen Sie mich in der Hoeschstraße 2 in 52372 Kreuzau oder rufen Sie an
-                unter <a href="tel:02422504344" className="text-accent hover:underline">02422 / 504344</a>.
-                Ich freue mich auf Ihre Anfrage!
+                Rufen Sie mich an unter <a href="tel:02422504344" className="text-accent hover:underline">02422 / 504344</a> oder
+                schreiben Sie mir – ich freue mich auf Ihre Anfrage!
               </p>
             </div>
           </div>

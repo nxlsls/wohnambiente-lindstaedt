@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, Clock } from "lucide-react";
 import logoDark from "@/assets/logo-dark.png";
 
 export function Footer() {
@@ -25,17 +25,6 @@ export function Footer() {
           <div>
             <h3 className="font-heading text-xl mb-6 text-accent">Kontakt</h3>
             <ul className="space-y-4">
-              <li>
-                <a 
-                  href="https://maps.google.com/?q=Hoeschstraße+2,+52372+Kreuzau" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-3 hover:text-accent transition-colors"
-                >
-                  <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
-                  <span>Hoeschstraße 2<br />52372 Kreuzau</span>
-                </a>
-              </li>
               <li>
                 <a 
                   href="tel:02422504344" 
