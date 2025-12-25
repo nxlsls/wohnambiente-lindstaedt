@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { CallbackForm } from "@/components/sections/CallbackForm";
-import { Phone, Mail, Clock, MessageCircle } from "lucide-react";
+import { Phone, Mail, Clock, MessageCircle, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Kontakt() {
@@ -36,6 +36,24 @@ export default function Kontakt() {
               <div>
                 <h2 className="text-2xl mb-6">So erreichen Sie mich</h2>
                 <ul className="space-y-6">
+                  <li>
+                    <div className="flex items-start gap-4">
+                      <div className="p-3 rounded-lg bg-accent/10 text-accent">
+                        <MapPin className="h-6 w-6" />
+                      </div>
+                      <div>
+                        <p className="font-medium text-lg">Adresse</p>
+                        <p className="text-muted-foreground">
+                          Hoeschstraße 2<br />
+                          52372 Kreuzau
+                        </p>
+                        <p className="text-sm text-amber-600 mt-2">
+                          Aktuell im Umbau – Termine zum Stoffe & Muster anschauen
+                          gerne nach Vereinbarung!
+                        </p>
+                      </div>
+                    </div>
+                  </li>
                   <li>
                     <a
                       href="tel:02422504344"
@@ -119,6 +137,19 @@ export default function Kontakt() {
         </div>
       </section>
 
+      {/* Map */}
+      <section className="h-96 bg-muted">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2517.5!2d6.484!3d50.746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf5a8e1c8b6b1d%3A0x0!2sHoeschstra%C3%9Fe%202%2C%2052372%20Kreuzau!5e0!3m2!1sde!2sde!4v1"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Wohnambiente Lindstädt Standort in Kreuzau"
+        />
+      </section>
     </Layout>
   );
 }

@@ -77,8 +77,8 @@ export default function UeberMich() {
                   />
                 </div>
                 {/* Decorative element */}
-                <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-6 py-3 rounded-lg shadow-elevated">
-                  <p className="font-medium">Seit 2018</p>
+                <div className="absolute -bottom-4 -right-4 bg-primary px-6 py-3 rounded-lg shadow-elevated">
+                  <p className="font-medium text-white">Seit 2018</p>
                 </div>
               </div>
             </div>
