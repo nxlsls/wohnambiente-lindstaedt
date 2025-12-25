@@ -15,9 +15,9 @@ export function Footer() {
               className="h-20 w-auto mb-6"
             />
             <p className="text-primary-foreground/80 text-base leading-relaxed">
-              Verena Lindstädt – Raumausstattermeisterin seit 2001. 
-              Persönliche Beratung für Sonnenschutz, Insektenschutz, Gardinen und Polsterei 
-              in Kreuzau und Umgebung.
+              Wohnambiente Lindstädt – Ihr Fachbetrieb seit 2018.
+              Persönliche Beratung für Sonnenschutz, Insektenschutz, Gardinen und Polsterei
+              in der gesamten Region.
             </p>
           </div>
 

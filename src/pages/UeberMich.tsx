@@ -9,7 +9,7 @@ const baseUrl = import.meta.env.BASE_URL;
 const milestones = [
   { year: "2001", text: "Meisterprüfung als Raumausstatterin" },
   { year: "2018", text: "Gründung von Wohnambiente Lindstädt" },
-  { year: "Heute", text: "Über 20 Jahre Erfahrung als Raumausstattermeisterin" },
+  { year: "Heute", text: "Ihr Fachbetrieb für Raumausstattung in der Region" },
 ];
 
 const values = [
@@ -40,7 +40,7 @@ export default function UeberMich() {
     <Layout>
       <SEOHead
         title="Über mich – Raumausstattermeisterin Verena Lindstädt"
-        description="Lernen Sie Verena Lindstädt kennen – Raumausstattermeisterin seit 2001. Persönliche Beratung und meisterliche Qualität für Ihr Zuhause in Kreuzau und Umgebung."
+        description="Lernen Sie Verena Lindstädt kennen – Raumausstattermeisterin. Persönliche Beratung und meisterliche Qualität für Ihr Zuhause. Von Heinsberg bis Bonn, von Düsseldorf bis in die Eifel."
         canonical="/ueber-mich"
       />
 
@@ -50,20 +50,20 @@ export default function UeberMich() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-accent font-medium text-lg mb-4 block">
-                Raumausstattermeisterin seit 2001
+                Wohnambiente Lindstädt – Ihr Fachbetrieb seit 2018
               </span>
               <h1 className="mb-6">
                 Verena Lindstädt
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-                Herzlich willkommen! Ich bin Verena Lindstädt und führe Wohnambiente Lindstädt 
-                als Inhaberin und Raumausstattermeisterin. Meine Leidenschaft für schöne Räume 
+                Herzlich willkommen! Ich bin Verena Lindstädt und führe Wohnambiente Lindstädt
+                als Inhaberin und Raumausstattermeisterin. Meine Leidenschaft für schöne Räume
                 und zufriedene Kunden treibt mich jeden Tag an.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Mit über 20 Jahren Erfahrung als Raumausstattermeisterin helfe ich Menschen
-                in Kreuzau und Umgebung dabei, ihr Zuhause zu verschönern – mit Insektenschutz,
-                Sonnenschutz, Gardinen und Polsterarbeiten. Persönlich, zuverlässig und in Meisterqualität.
+                Als Raumausstattermeisterin helfe ich Menschen in der gesamten Region dabei,
+                ihr Zuhause zu verschönern – mit Insektenschutz, Sonnenschutz, Gardinen und
+                Polsterarbeiten. Persönlich, zuverlässig und in Meisterqualität.
               </p>
             </div>
             <div className="flex justify-center">
@@ -78,7 +78,7 @@ export default function UeberMich() {
                 </div>
                 {/* Decorative element */}
                 <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-6 py-3 rounded-lg shadow-elevated">
-                  <p className="font-medium">Seit 2001</p>
+                  <p className="font-medium">Seit 2018</p>
                 </div>
               </div>
             </div>
@@ -231,7 +231,8 @@ export default function UeberMich() {
           </h2>
           <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-8">
             Ich freue mich darauf, Sie kennenzulernen und gemeinsam Ihr Projekt zu besprechen.
-            Rufen Sie mich an oder schreiben Sie mir – ich bin gerne für Sie da.
+            Ob in Düren, Heinsberg, Düsseldorf, Remscheid, Bonn oder der Eifel –
+            ich komme gerne zu Ihnen. Rufen Sie mich an oder schreiben Sie mir!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" asChild>

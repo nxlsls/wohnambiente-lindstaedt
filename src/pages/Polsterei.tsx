@@ -53,7 +53,7 @@ export default function Polsterei() {
             </nav>
             <h1 className="text-primary-foreground mb-6">Polsterei</h1>
             <p className="text-xl text-primary-foreground/90 leading-relaxed">
-              Professionelle Polsterarbeiten in Kreuzau und Umgebung. Ich gebe Ihren 
+              Professionelle Polsterarbeiten in der gesamten Region. Ich gebe Ihren 
               Lieblingsstücken neues Leben – durch Neubezug, Reparatur oder Restaurierung.
             </p>
           </div>
@@ -131,7 +131,7 @@ export default function Polsterei() {
           <h2 className="mb-4">Möbel aufpolstern lassen?</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
             Kontaktieren Sie mich für ein unverbindliches Angebot.
-            Ich berate Sie gerne in Kreuzau, Düren, Jülich und Umgebung!
+            Ich berate Sie gerne – von Heinsberg bis Bonn, von Düsseldorf bis in die Eifel!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>

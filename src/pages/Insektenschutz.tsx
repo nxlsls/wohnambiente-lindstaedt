@@ -68,7 +68,7 @@ export default function Insektenschutz() {
             <h1 className="text-primary-foreground mb-6">Insektenschutz</h1>
             <p className="text-xl text-primary-foreground/90 leading-relaxed">
               Genießen Sie frische Luft ohne lästige Insekten. Ich biete hochwertige
-              Insektenschutzlösungen für Fenster und Türen in Kreuzau und Umgebung –
+              Insektenschutzlösungen für Fenster und Türen in der gesamten Region –
               passgenau gefertigt und professionell montiert.
             </p>
           </div>
@@ -125,8 +125,8 @@ export default function Insektenschutz() {
         <div className="container-wide text-center">
           <h2 className="mb-4">Insektenschutz für Ihr Zuhause</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Ich berate Sie gerne persönlich und finde die passende Lösung für Ihre Fenster und Türen
-            in Kreuzau, Düren, Jülich und Umgebung.
+            Ich berate Sie gerne persönlich und finde die passende Lösung für Ihre Fenster und Türen –
+            von Heinsberg bis Bonn, von Düsseldorf bis in die Eifel!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>

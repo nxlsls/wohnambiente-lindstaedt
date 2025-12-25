@@ -118,7 +118,7 @@ export default function Gardinen() {
           <h2 className="mb-4">Neue Gardinen für Ihr Zuhause?</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
             Vereinbaren Sie einen Beratungstermin. Ich freue mich darauf,
-            Ihre Wohnräume in Kreuzau, Düren, Jülich und Umgebung zu verschönern!
+            Ihre Wohnräume zu verschönern – von Heinsberg bis Bonn, von Düsseldorf bis in die Eifel!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>

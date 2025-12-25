@@ -67,7 +67,7 @@ export default function Index() {
     <Layout>
       <SEOHead
         title="Raumausstattung in Kreuzau"
-        description="Wohnambiente Lindstädt – Ihr Fachbetrieb für Insektenschutz, Sonnenschutz, Gardinen und Polsterarbeiten in Kreuzau und Umgebung. Persönliche Beratung & Maßanfertigung."
+        description="Wohnambiente Lindstädt – Ihr Fachbetrieb für Insektenschutz, Sonnenschutz, Gardinen und Polsterarbeiten. Persönliche Beratung & Maßanfertigung von Heinsberg bis Bonn."
         canonical="/"
       />
 
@@ -138,7 +138,7 @@ export default function Index() {
             <h2 className="mb-4">Meine Leistungen</h2>
             <p className="text-xl text-muted-foreground">
               Von Insektenschutz bis Polsterei – ich biete Ihnen individuelle Lösungen 
-              für ein schöneres Zuhause in Kreuzau und Umgebung.
+              für ein schöneres Zuhause in der gesamten Region.
             </p>
           </div>
           
@@ -165,7 +165,7 @@ export default function Index() {
           </h2>
           <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-8">
             Ich komme zu Ihnen – für eine unverbindliche Beratung und
-            präzises Aufmaß direkt bei Ihnen zu Hause in Kreuzau und Umgebung.
+            präzises Aufmaß direkt bei Ihnen zu Hause. Von Heinsberg bis Bonn, von Düsseldorf bis in die Eifel.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" asChild>
@@ -182,11 +182,11 @@ export default function Index() {
       <section className="section-padding bg-brand-warm">
         <div className="container-wide">
           <div className="max-w-4xl mx-auto">
-            <h2 className="mb-6">Raumausstattung in Kreuzau – Ihr Partner für Wohnqualität</h2>
+            <h2 className="mb-6">Raumausstattung in Kreuzau – Ihr Fachbetrieb seit 2018</h2>
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p>
                 <strong>Wohnambiente Lindstädt</strong> – das bin ich, Verena Lindstädt,
-                Raumausstattermeisterin seit 2001. Mein Betrieb in Kreuzau steht für
+                Raumausstattermeisterin. Mein Fachbetrieb in Kreuzau steht für
                 persönliche Beratung und handwerkliche Qualität bei Insektenschutz,
                 Sonnenschutz, Gardinen und Polsterarbeiten.
               </p>
@@ -196,8 +196,10 @@ export default function Index() {
                 und finde gemeinsam mit Ihnen die beste Lösung für Ihr Zuhause.
               </p>
               <p>
-                Als Raumausstatterin bin ich für Kunden aus <strong>Kreuzau</strong>, <strong>Düren</strong>, <strong>Jülich</strong>, <strong>Nideggen</strong>, <strong>Heimbach</strong>, <strong>Vettweiß</strong>, <strong>Langerwehe</strong> und der gesamten Region tätig.
-                Gerne komme ich auch zu Ihnen nach Hause für eine unverbindliche Beratung vor Ort.
+                Als Raumausstatterin bin ich in einem großen Einzugsgebiet für Sie unterwegs:
+                Von <strong>Heinsberg</strong> über <strong>Düsseldorf</strong> und <strong>Remscheid</strong> bis
+                nach <strong>Bonn</strong> und in die <strong>Eifel</strong>. Natürlich auch in <strong>Kreuzau</strong>, <strong>Düren</strong>, <strong>Jülich</strong> und allen umliegenden Orten.
+                Gerne komme ich zu Ihnen nach Hause für eine unverbindliche Beratung vor Ort.
               </p>
               <p>
                 Besuchen Sie mich in der Hoeschstraße 2 in 52372 Kreuzau oder rufen Sie an

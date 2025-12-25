@@ -62,8 +62,8 @@ export default function Sonnenschutz() {
             </nav>
             <h1 className="text-primary-foreground mb-6">Sonnenschutz</h1>
             <p className="text-xl text-primary-foreground/90 leading-relaxed">
-              Optimaler Licht- und Wärmeschutz für Ihre Räume. Ich biete hochwertige 
-              Sonnenschutzlösungen in Kreuzau und Umgebung – individuell beraten, 
+              Optimaler Licht- und Wärmeschutz für Ihre Räume. Ich biete hochwertige
+              Sonnenschutzlösungen in der gesamten Region – individuell beraten,
               maßgefertigt und professionell montiert.
             </p>
           </div>
@@ -120,8 +120,8 @@ export default function Sonnenschutz() {
         <div className="container-wide text-center">
           <h2 className="mb-4">Sonnenschutz für Ihr Zuhause</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Ich berate Sie gerne persönlich und finde die passende Lösung für Ihre Räume
-            in Kreuzau, Düren, Jülich und Umgebung.
+            Ich berate Sie gerne persönlich und finde die passende Lösung für Ihre Räume –
+            von Heinsberg bis Bonn, von Düsseldorf bis in die Eifel!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
