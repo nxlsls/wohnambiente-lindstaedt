@@ -3,42 +3,22 @@ import { SEOHead } from "@/components/seo/SEOHead";
 import { Handshake, Award, CheckCircle } from "lucide-react";
 
 const partners = [
-  {
-    name: "Warema",
-    description: "Führender Hersteller für Sonnenschutzsysteme in Europa. Hochwertige Jalousien, Rollos und Markisen.",
-    category: "Sonnenschutz",
-    logo: "/placeholder.svg",
-  },
-  {
-    name: "Neher",
-    description: "Innovativer Insektenschutz Made in Germany. Spannrahmen, Drehrahmen und Schiebetüren in Premium-Qualität.",
-    category: "Insektenschutz",
-    logo: "/placeholder.svg",
-  },
-  {
-    name: "MHZ",
-    description: "Spezialist für textile Fensterdekoration. Plissees, Wabenplissees und Rollos in vielfältigen Designs.",
-    category: "Sonnenschutz",
-    logo: "/placeholder.svg",
-  },
-  {
-    name: "Jab Anstoetz",
-    description: "Exklusive Stoffe und Gardinen für höchste Ansprüche. Tradition und Innovation seit 1946.",
-    category: "Gardinen",
-    logo: "/placeholder.svg",
-  },
-  {
-    name: "Création Baumann",
-    description: "Schweizer Qualität für hochwertige Vorhangstoffe und textile Raumlösungen.",
-    category: "Gardinen",
-    logo: "/placeholder.svg",
-  },
-  {
-    name: "Gütegemeinschaft Polstermöbel",
-    description: "Zertifizierte Qualität bei Polsterarbeiten nach RAL-Gütezeichen.",
-    category: "Polsterei",
-    logo: "/placeholder.svg",
-  },
+  "Höpcke",
+  "Kadeco",
+  "Erfal",
+  "ADO",
+  "Zimmer & Rohde",
+  "Indes Fuggerhaus",
+  "Porschen",
+  "Wolff",
+  "Heco",
+  "Saum & Viebahn",
+  "Verdi",
+  "DNW",
+  "PT",
+  "Delius",
+  "C&C",
+  "Castello del Barro",
 ];
 
 const benefits = [
@@ -55,7 +35,7 @@ export default function Partner() {
     <Layout>
       <SEOHead
         title="Partner & Lieferanten"
-        description="Wohnambiente Lindstädt arbeitet mit führenden Markenherstellern zusammen: Warema, Neher, MHZ, Jab Anstoetz und mehr. Qualität durch starke Partnerschaften."
+        description="Wohnambiente Lindstädt arbeitet mit führenden Markenherstellern zusammen: Höpcke, Kadeco, Erfal, ADO, Zimmer & Rohde und mehr. Qualität durch starke Partnerschaften."
         canonical="/partner"
       />
 
@@ -80,28 +60,23 @@ export default function Partner() {
       {/* Partners Grid */}
       <section className="section-padding">
         <div className="container-wide">
-          <h2 className="text-center mb-12">Meine Markenpartner</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <h2 className="text-center mb-4">Meine Markenpartner</h2>
+          <p className="text-center text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Ich arbeite mit namhaften Herstellern zusammen, um Ihnen hochwertige Produkte
+            für Gardinen, Sonnenschutz und Raumausstattung zu bieten.
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {partners.map((partner) => (
               <div
-                key={partner.name}
-                className="bg-card rounded-xl p-8 shadow-card hover:shadow-elevated transition-shadow duration-300 border border-border"
+                key={partner}
+                className="bg-card rounded-lg p-6 shadow-card border border-border text-center hover:border-accent/50 transition-colors"
               >
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-xs font-medium px-3 py-1 bg-accent/10 text-accent rounded-full">
-                    {partner.category}
-                  </span>
-                </div>
-                <div className="h-24 flex items-center justify-center bg-muted rounded-lg mb-6 overflow-hidden">
-                  <img 
-                    src={partner.logo} 
-                    alt={`${partner.name} Logo`}
-                    className="h-16 w-auto object-contain"
-                  />
-                </div>
-                <p className="text-muted-foreground">{partner.description}</p>
+                <span className="font-heading text-lg font-medium">{partner}</span>
               </div>
             ))}
+            <div className="bg-accent/10 rounded-lg p-6 text-center flex items-center justify-center">
+              <span className="font-heading text-lg font-medium text-accent">und weitere...</span>
+            </div>
           </div>
         </div>
       </section>
@@ -141,8 +116,8 @@ export default function Partner() {
         <div className="container-wide text-center">
           <h2 className="mb-6">Überzeugen Sie sich von der Qualität</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Besuchen Sie mich in Kreuzau und erleben Sie die Qualität meiner Partnerprodukte. 
-            Ich berate Sie gerne persönlich.
+            Erleben Sie die Qualität meiner Partnerprodukte.
+            Ich berate Sie gerne persönlich – von Heinsberg bis Bonn, von Düsseldorf bis in die Eifel!
           </p>
           <a
             href="/kontakt"
