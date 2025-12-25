@@ -82,11 +82,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/galerie" className="hover:text-accent transition-colors">
-                  Galerie
-                </Link>
-              </li>
-              <li>
                 <Link to="/partner" className="hover:text-accent transition-colors">
                   Partner
                 </Link>
@@ -104,7 +99,7 @@ export function Footer() {
                   Termine nach Vereinbarung
                 </p>
                 <p className="text-primary-foreground/80 mt-2">
-                  Wir beraten Sie gerne persönlich vor Ort.
+                  Ich berate Sie gerne persönlich vor Ort.
                 </p>
               </div>
             </div>

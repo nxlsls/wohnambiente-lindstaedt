@@ -29,7 +29,7 @@ const NotFound = () => {
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               Die von Ihnen gesuchte Seite existiert leider nicht oder wurde verschoben.
-              Keine Sorge – wir helfen Ihnen gerne weiter!
+              Keine Sorge – ich helfe Ihnen gerne weiter!
             </p>
 
             {/* Helpful Links */}

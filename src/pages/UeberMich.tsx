@@ -8,8 +8,8 @@ const baseUrl = import.meta.env.BASE_URL;
 
 const milestones = [
   { year: "2001", text: "Meisterprüfung als Raumausstatterin" },
-  { year: "2005", text: "Gründung von Wohnambiente Lindstädt" },
-  { year: "Heute", text: "Über 20 Jahre Erfahrung in der Branche" },
+  { year: "2018", text: "Gründung von Wohnambiente Lindstädt" },
+  { year: "Heute", text: "Über 20 Jahre Erfahrung als Raumausstattermeisterin" },
 ];
 
 const values = [
@@ -61,9 +61,9 @@ export default function UeberMich() {
                 und zufriedene Kunden treibt mich jeden Tag an.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Seit über 20 Jahren helfe ich Menschen in Kreuzau und Umgebung dabei, 
-                ihr Zuhause zu verschönern – mit Insektenschutz, Sonnenschutz, Gardinen 
-                und Polsterarbeiten. Persönlich, zuverlässig und in Meisterqualität.
+                Mit über 20 Jahren Erfahrung als Raumausstattermeisterin helfe ich Menschen
+                in Kreuzau und Umgebung dabei, ihr Zuhause zu verschönern – mit Insektenschutz,
+                Sonnenschutz, Gardinen und Polsterarbeiten. Persönlich, zuverlässig und in Meisterqualität.
               </p>
             </div>
             <div className="flex justify-center">

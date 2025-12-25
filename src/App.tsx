@@ -11,7 +11,6 @@ import Insektenschutz from "./pages/Insektenschutz";
 import Sonnenschutz from "./pages/Sonnenschutz";
 import Gardinen from "./pages/Gardinen";
 import Polsterei from "./pages/Polsterei";
-import Galerie from "./pages/Galerie";
 import Partner from "./pages/Partner";
 import Kontakt from "./pages/Kontakt";
 import Impressum from "./pages/Impressum";
@@ -35,7 +34,6 @@ const App = () => (
             <Route path="/sonnenschutz" element={<Sonnenschutz />} />
             <Route path="/gardinen" element={<Gardinen />} />
             <Route path="/polsterei" element={<Polsterei />} />
-            <Route path="/galerie" element={<Galerie />} />
             <Route path="/partner" element={<Partner />} />
             <Route path="/kontakt" element={<Kontakt />} />
             <Route path="/impressum" element={<Impressum />} />

@@ -10,15 +10,15 @@ const baseUrl = import.meta.env.BASE_URL;
 const services = [
   {
     title: "Neubezug von Möbeln",
-    description: "Ihr Lieblingssofa hat schon bessere Tage gesehen? Wir geben ihm mit einem neuen Bezug neues Leben. Wählen Sie aus einer großen Auswahl hochwertiger Stoffe.",
+    description: "Ihr Lieblingssofa hat schon bessere Tage gesehen? Ich gebe ihm mit einem neuen Bezug neues Leben. Wählen Sie aus einer großen Auswahl hochwertiger Stoffe.",
   },
   {
     title: "Polsterarbeiten",
-    description: "Vom Austausch der Polsterung bis zur Reparatur von Rahmen und Federn – wir kümmern uns um alle Aspekte Ihrer Polstermöbel.",
+    description: "Vom Austausch der Polsterung bis zur Reparatur von Rahmen und Federn – ich kümmere mich um alle Aspekte Ihrer Polstermöbel.",
   },
   {
     title: "Restaurierung",
-    description: "Antike Möbel verdienen besondere Aufmerksamkeit. Wir restaurieren Ihre wertvollen Stücke fachgerecht und mit Liebe zum Detail.",
+    description: "Antike Möbel verdienen besondere Aufmerksamkeit. Ich restauriere Ihre wertvollen Stücke fachgerecht und mit Liebe zum Detail.",
   },
 ];
 
