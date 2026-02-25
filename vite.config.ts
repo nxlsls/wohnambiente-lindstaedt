@@ -4,9 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // GitHub Project Pages laufen unter /<repo-name>/.
-  // Sobald eine Custom Domain aktiv auf GitHub Pages zeigt, hier auf "/" umstellen.
-  base: "/wohnambiente-lindstaedt/",
+  base: "/",
   server: {
     host: "::",
     port: 8080,
