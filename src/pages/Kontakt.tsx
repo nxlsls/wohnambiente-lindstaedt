@@ -32,7 +32,7 @@ export default function Kontakt() {
         <div className="container-wide">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Info */}
-            <div className="lg:col-span-1 space-y-8">
+            <div id="contact-section" className="lg:col-span-1 space-y-8">
               <div>
                 <h2 className="text-2xl mb-6">So erreichen Sie mich</h2>
                 <ul className="space-y-6">
@@ -137,10 +137,10 @@ export default function Kontakt() {
         </div>
       </section>
 
-      {/* Map */}
+      {/* Map – Hoeschstraße 2, 52372 Kreuzau (Embed von Google Maps → Teilen → Karte einbetten) */}
       <section className="h-96 bg-muted">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2517.5!2d6.484!3d50.746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf5a8e1c8b6b1d%3A0x0!2sHoeschstra%C3%9Fe%202%2C%2052372%20Kreuzau!5e0!3m2!1sde!2sde!4v1"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2517.498!2d6.483682!3d50.746261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf4b2e2c8b6b1d%3A0x0!2sHoeschstra%C3%9Fe%202%2C%2052372%20Kreuzau!5e0!3m2!1sde!2sde"
           width="100%"
           height="100%"
           style={{ border: 0 }}

@@ -57,7 +57,7 @@ export const insektenschutzFAQs: FAQItem[] = [
   },
   {
     question: "Wie lange dauert die Montage von Insektenschutz?",
-    answer: "Die Montage dauert je nach Umfang zwischen 1-3 Stunden pro Fenster oder Tür. Bei mehreren Elementen plane ich einen halben bis ganzen Tag ein. Die genaue Dauer besprechen wir bei der Auftragserteilung.",
+    answer: "Die Dauer hängt vom Umfang und den Gegebenheiten vor Ort ab. Meine Auslastung ist derzeit sehr hoch – wie lange es in Ihrem Fall dauert, kann ich Ihnen nur bei einer konkreten Anfrage individuell sagen. Gerne besprechen wir das bei der Beratung.",
   },
   {
     question: "Kann ich Insektenschutz auch bei Dachfenstern anbringen?",
@@ -99,7 +99,7 @@ export const gardinenFAQs: FAQItem[] = [
   },
   {
     question: "Wie lange dauert es von der Bestellung bis zur Montage?",
-    answer: "Die Lieferzeit beträgt in der Regel 3-4 Wochen ab Auftragserteilung. Die Montage selbst dauert je nach Umfang wenige Stunden bis einen Tag. Bei Eilaufträgen prüfe ich gerne, ob eine schnellere Lieferung möglich ist.",
+    answer: "Die Dauer variiert je nach Umfang und aktueller Auslastung. Meine Auslastung ist derzeit sehr hoch – eine konkrete Zeitspanne kann ich Ihnen nur bei einer individuellen Anfrage nennen. Bei Eilwünschen prüfe ich gerne die Möglichkeiten.",
   },
   {
     question: "Können Sie auch alte Gardinenschienen nutzen?",
@@ -118,7 +118,7 @@ export const polstereiFAQs: FAQItem[] = [
   },
   {
     question: "Wie lange dauert ein Neubezug?",
-    answer: "Die reine Arbeitszeit beträgt je nach Möbelstück 1-3 Wochen. Dazu kommt die Stoffbeschaffung, die etwa 2 Wochen dauern kann. Insgesamt sollten Sie mit 3-5 Wochen rechnen. Bei dringenden Fällen prüfe ich, ob es schneller geht.",
+    answer: "Die Dauer hängt vom Möbelstück, der Stoffauswahl und dem Arbeitsaufwand ab – pauschal kann ich keine genaue Zeitspanne nennen. Meine Auslastung ist aktuell sehr hoch; wie lange es in Ihrem Fall wird, kann ich nur bei einer konkreten Anfrage individuell sagen. Gerne schaue ich mir Ihr Projekt an und gebe Ihnen dann eine realistische Einschätzung.",
   },
   {
     question: "Können auch antike Möbel restauriert werden?",

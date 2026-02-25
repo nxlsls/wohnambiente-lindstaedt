@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Phone } from "lucide-react";
 import { FAQ, sonnenschutzFAQs } from "@/components/sections/FAQ";
 import plisseeImg from "@/assets/sonnenschutz/plissee-normal.png";
+import wabenplisseeImg from "@/assets/sonnenschutz/wabenplissee_2.jpg";
 import jalousienImg from "@/assets/sonnenschutz/jalousien.png";
 import rollosImg from "@/assets/sonnenschutz/rollos.png";
 import lamellenvorhaengeImg from "@/assets/sonnenschutz/lamellenvorhaenge.png";
@@ -20,7 +21,7 @@ const products = [
     title: "Wabenplissees",
     description: "Die Wabenstruktur sorgt für hervorragende Wärmedämmung im Winter und Hitzeschutz im Sommer.",
     features: ["Wärmedämmend", "Energiesparend", "Lärmdämmend", "Modernes Design"],
-    image: plisseeImg,
+    image: wabenplisseeImg,
   },
   {
     title: "Jalousien",

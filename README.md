@@ -1,73 +1,79 @@
-# Welcome to your Lovable project
+# Wohnambiente Lindstädt – Website
 
-## Project info
+Offizielle Website des Raumausstattungsunternehmens **Wohnambiente Lindstädt** in Kreuzau (Insektenschutz, Sonnenschutz, Gardinen, Polsterei).
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+**Live:** [wohnambiente-lindstaedt.de](https://wohnambiente-lindstaedt.de)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## Technologie
 
-**Use Lovable**
+- **Vite** – Build-Tool
+- **React 18** + **TypeScript**
+- **Tailwind CSS** – Styling
+- **shadcn/ui** (Radix UI) – Komponenten
+- **React Router** – Routing
+- **React Helmet Async** – SEO (Meta, Open Graph)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## Lokale Entwicklung
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Voraussetzung: **Node.js** (z. B. per [nvm](https://github.com/nvm-sh/nvm#installing-and-updating)) und **npm**.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Repository klonen
+git clone <DEINE_GIT_URL>
+cd wohnambiente-lindstaedt
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Abhängigkeiten installieren
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Dev-Server starten (mit Hot Reload)
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Die App läuft dann unter `http://localhost:8080` (oder dem angezeigten Port).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## Skripte
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+| Befehl        | Beschreibung                    |
+|---------------|----------------------------------|
+| `npm run dev` | Dev-Server starten               |
+| `npm run build` | Produktions-Build erstellen    |
+| `npm run preview` | Build lokal vorspielen        |
+| `npm run lint` | ESLint ausführen                 |
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Der Build liegt nach `npm run build` im Ordner `dist/`.
 
-## How can I deploy this project?
+Für **GitHub Pages** ist in der Vite-Config `base: "/wohnambiente-lindstaedt/"` gesetzt. Bei eigener Domain den `base`-Wert in `vite.config.ts` anpassen (z. B. `"/"` für Root-Domain).
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## Projektstruktur (Auszug)
 
-Yes, you can!
+```
+src/
+├── assets/          # Bilder, Logos
+├── components/      # Wiederverwendbare Komponenten
+│   ├── layout/      # Header, Footer, Layout
+│   ├── sections/    # Sektionen (Formulare, Karten, FAQ)
+│   ├── seo/         # SEOHead
+│   └── ui/          # shadcn/ui Komponenten
+├── hooks/
+├── lib/
+├── pages/           # Seiten (Index, Kontakt, Leistungen, …)
+├── App.tsx
+├── main.tsx
+└── index.css
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+© Wohnambiente Lindstädt – Raumausstattung in Kreuzau

@@ -8,37 +8,34 @@ export function CallbackForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mkowngyn";
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get("name"),
-      phone: formData.get("phone"),
-      time: formData.get("time"),
-    };
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    formData.append("_subject", "Rückruf-Anfrage von der Website");
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/info@wohnambiente-lindstaedt.de", {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
         method: "POST",
+        body: formData,
         headers: {
-          "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify({
-          ...data,
-          _subject: "Rückruf-Anfrage von der Website",
-        }),
       });
 
-      if (response.ok) {
+      const result = await response.json();
+
+      if (response.ok && !result.error) {
         setIsSubmitted(true);
         toast.success("Ihre Rückruf-Anfrage wurde gesendet!");
       } else {
-        throw new Error("Fehler beim Senden");
+        throw new Error(result.error || "Fehler beim Senden");
       }
-    } catch (error) {
+    } catch {
       toast.error("Fehler beim Senden. Bitte rufen Sie uns direkt an.");
     } finally {
       setIsSubmitting(false);
@@ -97,11 +94,11 @@ export function CallbackForm() {
             name="time"
             className="w-full h-12 px-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
           >
-            <option value="vormittags">Vormittags (9-12 Uhr)</option>
-            <option value="mittags">Mittags (12-14 Uhr)</option>
-            <option value="nachmittags">Nachmittags (14-17 Uhr)</option>
-            <option value="abends">Abends (17-19 Uhr)</option>
-            <option value="egal">Jederzeit</option>
+            <option value="Vormittags (9-12 Uhr)">Vormittags (9-12 Uhr)</option>
+            <option value="Mittags (12-14 Uhr)">Mittags (12-14 Uhr)</option>
+            <option value="Nachmittags (14-17 Uhr)">Nachmittags (14-17 Uhr)</option>
+            <option value="Abends (17-19 Uhr)">Abends (17-19 Uhr)</option>
+            <option value="Jederzeit">Jederzeit</option>
           </select>
         </div>
         <Button type="submit" className="w-full h-12" disabled={isSubmitting}>

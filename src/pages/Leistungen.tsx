@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Grid, Sun, Home, Sofa } from "lucide-react";
 import insektenschutzCard from "@/assets/insektenschutz/insektenschutz-servicecard.png";
 import sonnenschutzCard from "@/assets/sonnenschutz/sonnenschutz-servicecard.png";
-import gardinenCard from "@/assets/gardinen/gardinen-servicecard.png";
-import placeholderImg from "@/assets/shared/placeholder.svg";
+import gardinenCard from "@/assets/gardinen/gardinen_2.png";
+import heroImage from "@/assets/hero-living-room.jpg";
 
 const leistungen = [
   {
@@ -38,7 +38,7 @@ const leistungen = [
     description: "Professionelle Polsterarbeiten und Neubezug von Möbeln. Ich gebe Ihren Lieblingsstücken neues Leben.",
     href: "/polsterei",
     icon: Sofa,
-    image: placeholderImg,
+    image: heroImage,
     items: ["Polsterarbeiten", "Neubezug von Möbeln", "Reparaturen"],
   },
 ];

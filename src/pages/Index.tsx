@@ -7,8 +7,7 @@ import { ArrowRight, Phone, Shield, Sun, Sofa, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-living-room.jpg";
 import insektenschutzCard from "@/assets/insektenschutz/insektenschutz-servicecard.png";
 import sonnenschutzCard from "@/assets/sonnenschutz/sonnenschutz-servicecard.png";
-import gardinenCard from "@/assets/gardinen/gardinen-servicecard.png";
-import placeholderImg from "@/assets/shared/placeholder.svg";
+import gardinenCard from "@/assets/gardinen/gardinen_2.png";
 
 const services = [
   {
@@ -36,7 +35,7 @@ const services = [
     title: "Polsterei",
     description: "Professionelle Polsterarbeiten und Neubezug – ich gebe Ihren Möbeln neues Leben.",
     href: "/polsterei",
-    image: placeholderImg,
+    image: heroImage,
     imageAlt: "Polsterarbeiten Sofa neu beziehen",
   },
 ];

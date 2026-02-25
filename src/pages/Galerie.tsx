@@ -4,6 +4,7 @@ import { SEOHead } from "@/components/seo/SEOHead";
 import { Lightbox } from "@/components/ui/lightbox";
 import { Camera, ZoomIn } from "lucide-react";
 import { Link } from "react-router-dom";
+import gardinen2Img from "@/assets/gardinen/gardinen_2.png";
 
 const galleryCategories = [
   {
@@ -28,9 +29,9 @@ const galleryCategories = [
     title: "Gardinen",
     href: "/gardinen",
     images: [
-      { src: "/gardinen.png", alt: "Elegante Gardinen im Wohnzimmer" },
-      { src: "/gardinen.png", alt: "Vorhänge im Schlafzimmer" },
-      { src: "/gardinen.png", alt: "Gardinen mit Raffhalter" },
+      { src: gardinen2Img, alt: "Elegante Gardinen im Wohnzimmer" },
+      { src: gardinen2Img, alt: "Vorhänge im Schlafzimmer" },
+      { src: gardinen2Img, alt: "Gardinen mit Raffhalter" },
     ],
   },
   {

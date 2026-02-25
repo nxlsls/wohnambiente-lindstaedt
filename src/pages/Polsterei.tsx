@@ -4,7 +4,7 @@ import { SEOHead } from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Phone } from "lucide-react";
 import { FAQ, polstereiFAQs } from "@/components/sections/FAQ";
-import placeholderImg from "@/assets/shared/placeholder.svg";
+import heroImage from "@/assets/hero-living-room.jpg";
 
 const services = [
   {
@@ -59,27 +59,18 @@ export default function Polsterei() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Services – Infos ohne Einzelbilder */}
       <section className="section-padding">
         <div className="container-wide">
           <div className="grid lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <article 
+              <article
                 key={service.title}
-                className="bg-card rounded-xl overflow-hidden shadow-card animate-fade-up"
+                className="bg-card rounded-xl p-8 shadow-card hover:shadow-elevated transition-shadow animate-fade-up border border-border"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="aspect-[16/10] bg-muted">
-                  <img
-                    src={placeholderImg}
-                    alt={`${service.title} - Polsterei Kreuzau`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-8">
-                  <h2 className="text-2xl mb-4">{service.title}</h2>
-                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
-                </div>
+                <h2 className="text-2xl mb-4 text-primary">{service.title}</h2>
+                <p className="text-muted-foreground leading-relaxed">{service.description}</p>
               </article>
             ))}
           </div>
@@ -92,7 +83,7 @@ export default function Polsterei() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="aspect-[4/3] rounded-xl overflow-hidden bg-muted">
               <img
-                src={placeholderImg}
+                src={heroImage}
                 alt="Polsterarbeiten Sofa Neubezug in Kreuzau"
                 className="w-full h-full object-cover"
               />
