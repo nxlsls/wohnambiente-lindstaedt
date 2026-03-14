@@ -99,7 +99,7 @@ export default function Datenschutz() {
 
             <h2>6. Aktualität und Änderung dieser Datenschutzerklärung</h2>
             <p>
-              Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Dezember 2024.
+              Diese Datenschutzerklärung ist aktuell gültig und hat den Stand März 2026.
             </p>
           </div>
         </div>

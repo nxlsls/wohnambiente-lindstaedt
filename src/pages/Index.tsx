@@ -68,8 +68,9 @@ export default function Index() {
     <Layout>
       <SEOHead
         title="Raumausstattung in Kreuzau"
-        description="Wohnambiente Lindstädt – Ihr Fachbetrieb für Insektenschutz, Sonnenschutz, Gardinen und Polsterarbeiten. Persönliche Beratung & Maßanfertigung von Heinsberg bis Bonn."
+        description="Wohnambiente Lindstädt – Raumausstattung in Kreuzau, Düren &amp; NRW: Insektenschutz, Sonnenschutz, Gardinen, Polsterei. Meisterbetrieb mit Beratung vor Ort."
         canonical="/"
+        keywords="Raumausstattung Kreuzau, Gardinen Düren, Insektenschutz Kreuzau, Sonnenschutz NRW, Polsterei Düren, Raumausstatter Meisterbetrieb"
       />
 
       {/* Hero Section */}

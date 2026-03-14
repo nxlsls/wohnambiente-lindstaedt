@@ -1,9 +1,12 @@
+import { Helmet } from "react-helmet-async";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+
+const BASE_URL = "https://wohnambiente-lindstaedt.de";
 
 export interface FAQItem {
   question: string;
@@ -16,9 +19,34 @@ interface FAQProps {
   description?: string;
 }
 
+function buildFAQSchema(items: FAQItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": items.map((item) => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer,
+      },
+    })),
+  };
+}
+
 export function FAQ({ items, title = "Häufige Fragen", description }: FAQProps) {
+  const faqSchema = items.length > 0 ? buildFAQSchema(items) : null;
+
   return (
-    <section className="section-padding bg-secondary">
+    <>
+      {faqSchema && (
+        <Helmet>
+          <script type="application/ld+json">
+            {JSON.stringify(faqSchema)}
+          </script>
+        </Helmet>
+      )}
+      <section className="section-padding bg-secondary">
       <div className="container-wide">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
@@ -46,6 +74,7 @@ export function FAQ({ items, title = "Häufige Fragen", description }: FAQProps)
         </div>
       </div>
     </section>
+    </>
   );
 }
 

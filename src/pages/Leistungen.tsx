@@ -47,9 +47,10 @@ export default function Leistungen() {
   return (
     <Layout>
       <SEOHead
-        title="Leistungen - Insektenschutz, Sonnenschutz, Gardinen & Polsterei"
-        description="Unsere Leistungen: Insektenschutz, Sonnenschutz, Gardinen und Polsterarbeiten in Kreuzau. Beratung, Maßanfertigung und Montage aus einer Hand."
+        title="Leistungen – Insektenschutz, Sonnenschutz, Gardinen & Polsterei"
+        description="Leistungen in Kreuzau &amp; Düren: Insektenschutz, Sonnenschutz, Gardinen, Polsterei. Beratung, Maßanfertigung, Montage – alles aus einer Hand."
         canonical="/leistungen"
+        keywords="Raumausstattung Leistungen Kreuzau, Insektenschutz Gardinen Polsterei Düren"
       />
 
       {/* Hero */}

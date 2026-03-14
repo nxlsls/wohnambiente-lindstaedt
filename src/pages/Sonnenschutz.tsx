@@ -48,8 +48,9 @@ export default function Sonnenschutz() {
     <Layout>
       <SEOHead
         title="Sonnenschutz in Kreuzau – Plissees, Jalousien & Rollos"
-        description="Sonnenschutz vom Fachmann in Kreuzau: Plissees, Wabenplissees, Jalousien, Rollos und Lamellenvorhänge. Beratung vor Ort & Maßanfertigung."
+        description="Sonnenschutz in Kreuzau, Düren: Plissees, Wabenplissees, Jalousien, Rollos. Maßanfertigung vom Meisterbetrieb – Beratung vor Ort in NRW."
         canonical="/sonnenschutz"
+        keywords="Sonnenschutz Kreuzau, Plissees Düren, Jalousien Kreuzau, Rollos NRW, Wabenplissee"
       />
 
       {/* Hero */}

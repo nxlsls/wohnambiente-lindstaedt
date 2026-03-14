@@ -53,8 +53,9 @@ export default function Insektenschutz() {
     <Layout>
       <SEOHead
         title="Insektenschutz in Kreuzau – Spannrahmen, Drehrahmen & mehr"
-        description="Insektenschutz vom Fachmann in Kreuzau: Spannrahmen, Drehrahmen, Pendeltüren, Schiebetüren und Lichtschachtabdeckungen. Beratung & Maßanfertigung."
+        description="Insektenschutz in Kreuzau &amp; Düren: Spannrahmen, Drehrahmen, Pendeltüren, Schiebetüren. Fliegengitter vom Meisterbetrieb – Beratung vor Ort."
         canonical="/insektenschutz"
+        keywords="Insektenschutz Kreuzau, Fliegengitter Düren, Spannrahmen Kreuzau, Insektenschutz NRW"
       />
 
       {/* Hero */}

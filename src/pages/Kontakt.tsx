@@ -10,8 +10,9 @@ export default function Kontakt() {
     <Layout>
       <SEOHead
         title="Kontakt – Raumausstattung in Kreuzau"
-        description="Kontaktieren Sie Wohnambiente Lindstädt in Kreuzau. Ich berate Sie gerne zu Insektenschutz, Sonnenschutz, Gardinen und Polsterarbeiten."
+        description="Kontakt &amp; Beratungstermin: Wohnambiente Lindstädt in Kreuzau. Insektenschutz, Sonnenschutz, Gardinen, Polsterei – persönlich in Kreuzau, Düren, NRW."
         canonical="/kontakt"
+        keywords="Kontakt Raumausstattung Kreuzau, Beratung Gardinen Düren, Anfrage Insektenschutz"
       />
 
       {/* Hero */}

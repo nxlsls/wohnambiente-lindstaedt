@@ -20,8 +20,9 @@ export default function Gardinen() {
     <Layout>
       <SEOHead
         title="Gardinen in Kreuzau – Maßanfertigung & Beratung"
-        description="Maßgefertigte Gardinen in Kreuzau: Persönliche Beratung, präzises Aufmaß und professionelle Montage. Individuelle Lösungen für Ihr Zuhause."
+        description="Gardinen in Kreuzau &amp; Düren: Maßanfertigung, Beratung vor Ort, Aufmaß &amp; Montage. Stoffe und Vorhänge vom Raumausstatter-Meisterbetrieb."
         canonical="/gardinen"
+        keywords="Gardinen Kreuzau, Vorhänge Düren, Maßgardinen NRW, Stoffe Raumausstattung"
       />
 
       {/* Hero */}

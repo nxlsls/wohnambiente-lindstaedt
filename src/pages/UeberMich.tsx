@@ -39,8 +39,9 @@ export default function UeberMich() {
     <Layout>
       <SEOHead
         title="Über mich – Raumausstattermeisterin Verena Lindstädt"
-        description="Lernen Sie Verena Lindstädt kennen – Raumausstattermeisterin. Persönliche Beratung und meisterliche Qualität für Ihr Zuhause. Von Heinsberg bis Bonn, von Düsseldorf bis in die Eifel."
+        description="Verena Lindstädt – Raumausstattermeisterin in Kreuzau. Persönliche Beratung in Kreuzau, Düren, NRW. Von Heinsberg bis Bonn, Düsseldorf bis Eifel."
         canonical="/ueber-mich"
+        keywords="Raumausstattermeisterin Kreuzau, Verena Lindstädt, Raumausstattung Meisterbetrieb Düren"
       />
 
       {/* Hero Section */}
