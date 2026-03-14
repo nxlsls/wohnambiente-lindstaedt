@@ -35,13 +35,15 @@ export default function Datenschutz() {
               E-Mail: info@wohnambiente-lindstaedt.de
             </p>
 
-            <h2>2. Hosting</h2>
+            <h2>2. Hosting: GitHub Pages</h2>
             <p>
-              Wir hosten die Inhalte unserer Website bei folgendem Anbieter:
+              Wir hosten unsere Website bei GitHub Pages. Anbieter ist die GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA (nachfolgend „GitHub“).
             </p>
             <p>
-              Die Server des Hosters befinden sich in Deutschland. Die Datenverarbeitung erfolgt 
-              auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.
+              Wenn Sie unsere Website besuchen, erfasst GitHub Ihre IP-Adresse und weitere technische Informationen (z.B. Browsertyp, Betriebssystem, Referrer-URL, Uhrzeit der Serveranfrage) in sogenannten Server-Logfiles. Die Verwendung von GitHub Pages erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website.
+            </p>
+            <p>
+              Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission sowie das EU-U.S. Data Privacy Framework (DPF) gestützt. Details finden Sie in der Datenschutzerklärung von GitHub: https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement. Wir haben mit GitHub einen Vertrag zur Auftragsverarbeitung (AVV) geschlossen.
             </p>
 
             <h2>3. Allgemeine Hinweise und Pflichtinformationen</h2>
@@ -66,17 +68,18 @@ export default function Datenschutz() {
 
             <h2>4. Datenerfassung auf dieser Website</h2>
 
-            <h3>Kontaktformular</h3>
+            <h3>Kontaktformular (via Formspree)</h3>
             <p>
-              Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus 
-              dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks 
-              Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. 
-              Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+              Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.
             </p>
             <p>
-              Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, 
-              sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur 
-              Durchführung vorvertraglicher Maßnahmen erforderlich ist.
+              Zur technischen Abwicklung der Formularanfragen nutzen wir den Dienst Formspree. Anbieter ist die Formspree, Inc., 2155 S. Bascom Ave, Suite 210, Campbell, CA 95008, USA.
+            </p>
+            <p>
+              Wenn Sie das Formular absenden, werden die eingegebenen Daten an die Server von Formspree in den USA übertragen, dort verarbeitet und an unser E-Mail-Postfach weitergeleitet. Die Verarbeitung erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sowie Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt.
+            </p>
+            <p>
+              Die Datenübertragung in die USA wird auf das EU-U.S. Data Privacy Framework gestützt. Wir haben mit Formspree einen Vertrag zur Auftragsverarbeitung (Data Processing Addendum) geschlossen. Weitere Informationen finden Sie in der Datenschutzerklärung von Formspree: https://formspree.io/legal/privacy-policy/.
             </p>
 
             <h3>Anfrage per E-Mail, Telefon oder Fax</h3>
