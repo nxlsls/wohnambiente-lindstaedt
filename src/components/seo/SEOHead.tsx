@@ -8,9 +8,11 @@ interface SEOHeadProps {
   image?: string;
   /** Lokale Suchbegriffe für bessere Auffindbarkeit (z.B. "Raumausstattung Kreuzau, Gardinen Düren") */
   keywords?: string;
+  /** Seite von der Indexierung ausschließen (z. B. 404-Seite) */
+  noindex?: boolean;
 }
 
-const BASE_URL = "https://wohnambiente-lindstaedt.de";
+const BASE_URL = "https://www.wohnambiente-lindstaedt.de";
 const SITE_TITLE = "Wohnambiente Lindstädt";
 
 export function SEOHead({
@@ -18,8 +20,9 @@ export function SEOHead({
   description,
   canonical,
   type = "website",
-  image = "/og-image.png",
+  image = "/og-image.jpg",
   keywords,
+  noindex = false,
 }: SEOHeadProps) {
   const fullTitle = `${title} | ${SITE_TITLE}`;
   const canonicalUrl = canonical ? `${BASE_URL}${canonical}` : BASE_URL;
@@ -29,6 +32,7 @@ export function SEOHead({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
+      {noindex && <meta name="robots" content="noindex, follow" />}
 
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />

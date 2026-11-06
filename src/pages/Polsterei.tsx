@@ -4,7 +4,7 @@ import { SEOHead } from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Phone } from "lucide-react";
 import { FAQ, polstereiFAQs } from "@/components/sections/FAQ";
-import heroImage from "@/assets/hero-living-room.jpg";
+import heroImage from "@/assets/hero-living-room.webp";
 
 const services = [
   {

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, Clock } from "lucide-react";
-import logoDark from "@/assets/logo-dark.png";
+import logoDark from "@/assets/logo-dark.webp";
 
 export function Footer() {
   return (

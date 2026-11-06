@@ -1,20 +1,7 @@
 # Wohnambiente Lindstädt - Raumausstattung in Kreuzau
-# https://wohnambiente-lindstaedt.de
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
+# https://www.wohnambiente-lindstaedt.de
 
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://wohnambiente-lindstaedt.de/sitemap.xml
+Sitemap: https://www.wohnambiente-lindstaedt.de/sitemap.xml

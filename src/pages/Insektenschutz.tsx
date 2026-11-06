@@ -4,11 +4,11 @@ import { SEOHead } from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Phone } from "lucide-react";
 import { FAQ, insektenschutzFAQs } from "@/components/sections/FAQ";
-import spannrahmenImg from "@/assets/insektenschutz/insektenschutz-spannrahmen.jpg";
-import drehrahmenImg from "@/assets/insektenschutz/insektenschutz-drehrahmen.jpg";
-import pendeltuerImg from "@/assets/insektenschutz/insektenschutz-pendeltuer.jpg";
-import schiebetuerImg from "@/assets/insektenschutz/insektenschutz-schiebetuer.jpg";
-import lichtschachtImg from "@/assets/insektenschutz/insektenschutz-lichtschacht.jpg";
+import spannrahmenImg from "@/assets/insektenschutz/insektenschutz-spannrahmen.webp";
+import drehrahmenImg from "@/assets/insektenschutz/insektenschutz-drehrahmen.webp";
+import pendeltuerImg from "@/assets/insektenschutz/insektenschutz-pendeltuer.webp";
+import schiebetuerImg from "@/assets/insektenschutz/insektenschutz-schiebetuer.webp";
+import lichtschachtImg from "@/assets/insektenschutz/insektenschutz-lichtschacht.webp";
 
 const products = [
   {

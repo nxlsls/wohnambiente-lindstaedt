@@ -4,7 +4,7 @@ import { SEOHead } from "@/components/seo/SEOHead";
 import { Lightbox } from "@/components/ui/lightbox";
 import { Camera, ZoomIn } from "lucide-react";
 import { Link } from "react-router-dom";
-import gardinen2Img from "@/assets/gardinen/gardinen_2.png";
+import gardinen2Img from "@/assets/gardinen/gardinen_2.webp";
 
 const galleryCategories = [
   {

@@ -3,10 +3,10 @@ import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Grid, Sun, Home, Sofa } from "lucide-react";
-import insektenschutzCard from "@/assets/insektenschutz/insektenschutz-servicecard.png";
-import sonnenschutzCard from "@/assets/sonnenschutz/sonnenschutz-servicecard.png";
-import gardinenCard from "@/assets/gardinen/gardinen_2.png";
-import heroImage from "@/assets/hero-living-room.jpg";
+import insektenschutzCard from "@/assets/insektenschutz/insektenschutz-servicecard.webp";
+import sonnenschutzCard from "@/assets/sonnenschutz/sonnenschutz-servicecard.webp";
+import gardinenCard from "@/assets/gardinen/gardinen_2.webp";
+import heroImage from "@/assets/hero-living-room.webp";
 
 const leistungen = [
   {

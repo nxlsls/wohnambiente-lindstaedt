@@ -10,6 +10,7 @@ const NotFound = () => {
       <SEOHead
         title="Seite nicht gefunden"
         description="Die gesuchte Seite wurde nicht gefunden. Besuchen Sie unsere Startseite oder kontaktieren Sie uns."
+        noindex
       />
 
       <section className="section-padding min-h-[60vh] flex items-center">

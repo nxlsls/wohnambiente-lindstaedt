@@ -4,10 +4,10 @@ import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
 import { ServiceCard } from "@/components/sections/ServiceCard";
 import { ArrowRight, Phone, Shield, Sun, Sofa, Sparkles } from "lucide-react";
-import heroImage from "@/assets/hero-living-room.jpg";
-import insektenschutzCard from "@/assets/insektenschutz/insektenschutz-servicecard.png";
-import sonnenschutzCard from "@/assets/sonnenschutz/sonnenschutz-servicecard.png";
-import gardinenCard from "@/assets/gardinen/gardinen_2.png";
+import heroImage from "@/assets/hero-living-room.webp";
+import insektenschutzCard from "@/assets/insektenschutz/insektenschutz-servicecard.webp";
+import sonnenschutzCard from "@/assets/sonnenschutz/sonnenschutz-servicecard.webp";
+import gardinenCard from "@/assets/gardinen/gardinen_2.webp";
 
 const services = [
   {

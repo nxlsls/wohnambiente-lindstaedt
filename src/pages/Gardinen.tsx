@@ -4,7 +4,7 @@ import { SEOHead } from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Phone } from "lucide-react";
 import { FAQ, gardinenFAQs } from "@/components/sections/FAQ";
-import gardinenImg from "@/assets/gardinen/gardinen_2.png";
+import gardinenImg from "@/assets/gardinen/gardinen_2.webp";
 
 const features = [
   "Persönliche Beratung bei Ihnen zu Hause",

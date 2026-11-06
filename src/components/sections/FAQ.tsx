@@ -6,7 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const BASE_URL = "https://wohnambiente-lindstaedt.de";
+const BASE_URL = "https://www.wohnambiente-lindstaedt.de";
 
 export interface FAQItem {
   question: string;

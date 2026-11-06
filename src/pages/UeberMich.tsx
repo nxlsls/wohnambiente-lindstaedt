@@ -3,7 +3,7 @@ import { SEOHead } from "@/components/seo/SEOHead";
 import { Award, Heart, Users, Clock, CheckCircle, Shield, BadgeCheck, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import profileImage from "@/assets/ueber-mich/verena-lindstaedt.png";
+import profileImage from "@/assets/ueber-mich/verena-lindstaedt.webp";
 
 const milestones = [
   { year: "2001", text: "Meisterprüfung als Raumausstatterin" },

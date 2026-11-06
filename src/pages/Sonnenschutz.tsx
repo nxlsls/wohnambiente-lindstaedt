@@ -4,11 +4,11 @@ import { SEOHead } from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Phone } from "lucide-react";
 import { FAQ, sonnenschutzFAQs } from "@/components/sections/FAQ";
-import plisseeImg from "@/assets/sonnenschutz/plissee-normal.png";
-import wabenplisseeImg from "@/assets/sonnenschutz/wabenplissee_2.jpg";
-import jalousienImg from "@/assets/sonnenschutz/jalousien.png";
-import rollosImg from "@/assets/sonnenschutz/rollos.png";
-import lamellenvorhaengeImg from "@/assets/sonnenschutz/lamellenvorhaenge.png";
+import plisseeImg from "@/assets/sonnenschutz/plissee-normal.webp";
+import wabenplisseeImg from "@/assets/sonnenschutz/wabenplissee_2.webp";
+import jalousienImg from "@/assets/sonnenschutz/jalousien.webp";
+import rollosImg from "@/assets/sonnenschutz/rollos.webp";
+import lamellenvorhaengeImg from "@/assets/sonnenschutz/lamellenvorhaenge.webp";
 
 const products = [
   {

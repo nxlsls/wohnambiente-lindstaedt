@@ -10,6 +10,10 @@ export default defineConfig({
     port: 8080,
   },
   plugins: [react()],
+  ssr: {
+    // Für das Prerendering alle Abhängigkeiten mitbündeln (vermeidet ESM/CJS-Probleme in Node)
+    noExternal: true,
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
