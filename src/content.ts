@@ -23,6 +23,8 @@ export const SHOP = {
   email: 'info@wohnambiente-lindstaedt.de',
   vatId: 'DE317580319',
   facebook: 'https://www.facebook.com/wohnambientelindstaedtvl/',
+  // The Google Business Profile, by its permanent customer id (CID).
+  googleMaps: 'https://maps.google.com/?cid=4183947278988717720',
   // Hoeschstraße 2, Kreuzau-Untermaubach (OpenStreetMap)
   geo: { lat: 50.7298483, lon: 6.4595241 },
   route: 'https://www.google.com/maps/dir/?api=1&destination=Hoeschstra%C3%9Fe+2%2C+52372+Kreuzau',
@@ -198,7 +200,7 @@ export const PRODUCT_GROUPS: ProductGroup[] = [
         photo: 'spannrahmen',
         alt: 'Insektenschutz-Spannrahmen wird in ein Fenster eingesetzt',
         text: 'Für Fenster, die selten geöffnet werden.',
-        details: 'Der Klassiker für Fenster. Spannrahmen lassen sich einfach einsetzen und herausnehmen – ideal für die regelmäßige Reinigung.',
+        details: 'Das klassische Fliegengitter für Fenster. Spannrahmen lassen sich einfach einsetzen und herausnehmen – ideal für die regelmäßige Reinigung.',
         features: ['Einfache Montage', 'Hohe Stabilität', 'Passgenau gefertigt', 'Leichte Reinigung'],
       },
       {
@@ -307,7 +309,7 @@ export const QUESTIONS = [
   },
 ]
 
-export const AREA = ['Kreuzau', 'Düren', 'Nideggen', 'Heimbach', 'Jülich', 'Vettweiß', 'Langerwehe']
+export const AREA = ['Kreuzau', 'Düren', 'Nideggen', 'Hürtgenwald', 'Vettweiß', 'Nörvenich', 'Langerwehe', 'Heimbach', 'Jülich']
 export const AREA_MORE = 'und die ganze Region – von Heinsberg bis Bonn, von Düsseldorf bis in die Eifel.'
 export const SHOWROOM_NOTE = 'Aktuell im Umbau – Stoffe und Muster zeige ich Ihnen gern nach Vereinbarung in Kreuzau.'
 

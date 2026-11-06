@@ -37,7 +37,8 @@ const business = {
   foundingDate: '2018',
   currenciesAccepted: 'EUR',
   paymentAccepted: 'Überweisung, EC-Karte, Bar',
-  sameAs: [SHOP.facebook],
+  sameAs: [SHOP.facebook, SHOP.googleMaps],
+  hasMap: SHOP.googleMaps,
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Raumausstattung',

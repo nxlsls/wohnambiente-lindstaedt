@@ -104,14 +104,14 @@ export const SERVICE_PAGES: ServicePageData[] = [
     slug: 'insektenschutz',
     name: 'Insektenschutz',
     groupId: 'p-insektenschutz',
-    h1: 'Insektenschutz nach Maß in Kreuzau & Düren',
+    h1: 'Insektenschutz & Fliegengitter in Kreuzau & Düren',
     intro:
-      'Genießen Sie frische Luft ohne lästige Insekten. Ich biete hochwertige Insektenschutzlösungen für Fenster und Türen in der gesamten Region – passgenau gefertigt und professionell montiert.',
+      'Genießen Sie frische Luft ohne lästige Insekten. Ich fertige Fliegengitter und Insektenschutz für Fenster, Türen und Lichtschächte nach Maß – für Kreuzau, Düren und die ganze Region, passgenau gefertigt und professionell montiert.',
     photo: { name: 'schiebetuer', width: 1400, alt: 'Frau öffnet eine Insektenschutz-Schiebetür an der Terrasse' },
     lead: {
       title: 'Frische Luft ohne Mücken',
       paragraphs: [
-        'Welcher Insektenschutz passt, hängt von Ihren Fenstern und Türen ab: Spannrahmen für Fenster, die selten geöffnet werden, Drehrahmen für Fenster mit Dreh-Kipp-Funktion, Pendel- oder Schiebetüren für Terrasse und Balkon.',
+        'Welches Fliegengitter passt, hängt von Ihren Fenstern und Türen ab: Spannrahmen für Fenster, die selten geöffnet werden, Drehrahmen für Fenster mit Dreh-Kipp-Funktion, Pendel- oder Schiebetüren für Terrasse und Balkon.',
         'Auch für Dachfenster und Kellerlichtschächte gibt es passende Lösungen. Ich messe alles bei Ihnen vor Ort aus, lasse es passgenau fertigen und montiere es fachgerecht.',
       ],
       features: [
@@ -123,6 +123,14 @@ export const SERVICE_PAGES: ServicePageData[] = [
       ],
     },
     faqs: [
+      {
+        q: 'Ist ein Fliegengitter dasselbe wie Insektenschutz?',
+        a: 'Ja, gemeint ist dasselbe: ein feines Gewebe in einem Rahmen, das Mücken, Fliegen und andere Insekten draußen hält und frische Luft hereinlässt. Ich fertige Fliegengitter als Spannrahmen oder Drehrahmen für Fenster, als Pendel- oder Schiebetür für Terrasse und Balkon und als Abdeckung für Kellerlichtschächte – jeweils nach Maß.',
+      },
+      {
+        q: 'Für welche Orte bieten Sie Insektenschutz an?',
+        a: 'Für ganz Kreuzau mit allen Ortsteilen – zum Beispiel Drove, Stockheim, Winden, Obermaubach, Untermaubach, Boich, Leversbach, Thum und Üdingen – sowie für Düren, Nideggen, Hürtgenwald, Vettweiß, Nörvenich und die weitere Umgebung. Zur Beratung und zum Aufmaß komme ich zu Ihnen nach Hause, kostenlos und unverbindlich.',
+      },
       {
         q: 'Welcher Insektenschutz passt am besten zu meinen Fenstern?',
         a: 'Das hängt von Ihren Fenstern und Nutzungsgewohnheiten ab. Spannrahmen eignen sich ideal für Fenster, die selten geöffnet werden. Drehrahmen sind perfekt für Fenster mit Dreh-Kipp-Funktion. Bei Terrassentüren empfehle ich Pendel- oder Schiebetüren. Bei einem kostenlosen Beratungstermin vor Ort finde ich die optimale Lösung für Sie.',
@@ -221,7 +229,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Raumausstattermeisterin Verena Lindstädt in Kreuzau bei Düren: Gardinen, Sonnenschutz, Insektenschutz und Polsterei nach Maß. Kostenlose Beratung bei Ihnen zu Hause – Tel. 02422 504344.',
   },
   '/gardinen': {
-    title: 'Gardinen nach Maß in Kreuzau & Düren',
+    title: 'Gardinen & Vorhänge nach Maß in Kreuzau & Düren',
     description:
       'Gardinen und Vorhänge nach Maß in Kreuzau & Düren: kostenlose Stoffberatung bei Ihnen zu Hause, Aufmaß und Montage vom Raumausstatter-Meisterbetrieb. Tel. 02422 504344.',
   },
@@ -231,9 +239,9 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Sonnenschutz nach Maß in Kreuzau & Düren: Plissees, Wabenplissees, Jalousien, Rollos und Lamellenvorhänge. Kostenlose Beratung vor Ort, Aufmaß und Montage vom Meisterbetrieb.',
   },
   '/insektenschutz': {
-    title: 'Insektenschutz nach Maß in Kreuzau & Düren',
+    title: 'Insektenschutz Kreuzau & Düren – Fliegengitter nach Maß',
     description:
-      'Insektenschutz in Kreuzau & Düren: Spannrahmen, Drehrahmen, Pendeltüren, Schiebetüren und Lichtschachtabdeckungen nach Maß – kostenlose Beratung vor Ort und Montage vom Meisterbetrieb.',
+      'Insektenschutz und Fliegengitter nach Maß in Kreuzau, Düren und Umgebung: Spannrahmen, Drehrahmen, Pendel- und Schiebetüren, Lichtschachtabdeckungen. Kostenlose Beratung vor Ort und Montage vom Meisterbetrieb.',
   },
   '/polsterei': {
     title: 'Polsterei in Kreuzau & Düren – Möbel neu beziehen',
