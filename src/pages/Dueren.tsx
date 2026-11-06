@@ -6,7 +6,7 @@ export function Dueren() {
   const scope = useReveal('.dueren-reveal')
   return (
     <>
-      <PageHero crumb="Raumausstatter Düren" title={DUEREN.h1} intro={DUEREN.intro} photo={DUEREN.photo} />
+      <PageHero crumb="Raumausstatter Düren" title={DUEREN.h1} intro={DUEREN.intro} photo={DUEREN.photo} nameFirst />
       <section ref={scope} className="lead lead--wide" aria-labelledby="dueren-services">
         <div className="dueren-reveal">
           <p className="label star-rule">Raumausstattung in Düren</p>

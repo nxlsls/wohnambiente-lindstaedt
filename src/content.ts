@@ -47,7 +47,7 @@ export const HERO_PHOTO = {
   alt: 'Heller Wohnraum mit zwei Sesseln und einer Holzjalousie am hohen Fenster',
 }
 
-export const HERO_EYEBROW = 'Raumausstattermeisterin in Kreuzau'
+export const HERO_EYEBROW = 'Raumausstattermeisterin für Kreuzau & Düren'
 export const HERO_LINES = ['Wohnambiente', 'Lindstädt']
 
 export const HERO_INTRO =

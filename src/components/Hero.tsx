@@ -37,11 +37,6 @@ export function Hero() {
 
   return (
     <section id="top" ref={scope} className="hero" aria-labelledby="hero-title">
-      <div className="hero-photo">
-        <Photo name={HERO_PHOTO.name} width={HERO_PHOTO.width} sizes="100vw" alt={HERO_PHOTO.alt} eager />
-      </div>
-      <div className="hero-shade" aria-hidden="true" />
-
       <div className="hero-content">
         <h1 id="hero-title">
           <span className="hero-eyebrow label hero-fade">{HERO_EYEBROW}</span>{' '}
@@ -56,7 +51,7 @@ export function Hero() {
         <p className="hero-intro hero-fade">{HERO_INTRO}</p>
         <div className="hero-actions hero-fade">
           <a
-            className="btn btn--light label"
+            className="btn label"
             href="#kontakt"
             onClick={(e) => {
               e.preventDefault()
@@ -73,11 +68,13 @@ export function Hero() {
 
       <ul className="hero-points hero-fade" aria-label="Auf einen Blick">
         {HERO_POINTS.map((point) => (
-          <li key={point} className="label">
-            {point}
-          </li>
+          <li key={point}>{point}</li>
         ))}
       </ul>
+
+      <div className="hero-photo">
+        <Photo name={HERO_PHOTO.name} width={HERO_PHOTO.width} sizes="100vw" alt={HERO_PHOTO.alt} eager />
+      </div>
     </section>
   )
 }
