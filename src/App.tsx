@@ -13,6 +13,7 @@ import Insektenschutz from "./pages/Insektenschutz";
 import Sonnenschutz from "./pages/Sonnenschutz";
 import Gardinen from "./pages/Gardinen";
 import Polsterei from "./pages/Polsterei";
+import RaumausstatterDueren from "./pages/RaumausstatterDueren";
 import Partner from "./pages/Partner";
 import Kontakt from "./pages/Kontakt";
 import Impressum from "./pages/Impressum";
@@ -33,6 +34,7 @@ export function AppRoutes() {
         <Route path="/sonnenschutz" element={<Sonnenschutz />} />
         <Route path="/gardinen" element={<Gardinen />} />
         <Route path="/polsterei" element={<Polsterei />} />
+        <Route path="/raumausstatter-dueren" element={<RaumausstatterDueren />} />
         <Route path="/partner" element={<Partner />} />
         <Route path="/kontakt" element={<Kontakt />} />
         <Route path="/impressum" element={<Impressum />} />

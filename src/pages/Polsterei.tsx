@@ -34,8 +34,8 @@ export default function Polsterei() {
   return (
     <Layout>
       <SEOHead
-        title="Polsterei in Kreuzau – Neubezug & Polsterarbeiten"
-        description="Polsterei in Kreuzau, Düren: Neubezug, Polsterarbeiten, Restaurierung. Sofa &amp; Sessel neu beziehen vom Meisterbetrieb – NRW."
+        title="Polsterei in Kreuzau &amp; Düren – Möbel neu beziehen"
+        description="Polsterei in Kreuzau &amp; Düren: Sofa, Sessel und Stühle neu beziehen, Polsterarbeiten und Restaurierung vom Raumausstatter-Meisterbetrieb. Tel. 02422 504344."
         canonical="/polsterei"
         keywords="Polsterei Kreuzau, Neubezug Düren, Polsterarbeiten NRW, Sofa beziehen"
       />
@@ -51,7 +51,7 @@ export default function Polsterei() {
               <span className="mx-2">/</span>
               <span>Polsterei</span>
             </nav>
-            <h1 className="text-primary-foreground mb-6">Polsterei</h1>
+            <h1 className="text-primary-foreground mb-6">Polsterei in Kreuzau &amp; Düren</h1>
             <p className="text-xl text-primary-foreground/90 leading-relaxed">
               Professionelle Polsterarbeiten in der gesamten Region. Ich gebe Ihren 
               Lieblingsstücken neues Leben – durch Neubezug, Reparatur oder Restaurierung.

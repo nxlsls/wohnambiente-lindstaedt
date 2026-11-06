@@ -12,6 +12,7 @@ export const prerenderRoutes = [
   "/sonnenschutz",
   "/gardinen",
   "/polsterei",
+  "/raumausstatter-dueren",
   "/partner",
   "/kontakt",
   "/impressum",

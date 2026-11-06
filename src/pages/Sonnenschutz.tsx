@@ -47,8 +47,8 @@ export default function Sonnenschutz() {
   return (
     <Layout>
       <SEOHead
-        title="Sonnenschutz in Kreuzau – Plissees, Jalousien & Rollos"
-        description="Sonnenschutz in Kreuzau, Düren: Plissees, Wabenplissees, Jalousien, Rollos. Maßanfertigung vom Meisterbetrieb – Beratung vor Ort in NRW."
+        title="Sonnenschutz in Kreuzau &amp; Düren – Plissees &amp; Rollos"
+        description="Sonnenschutz nach Maß in Kreuzau &amp; Düren: Plissees, Wabenplissees, Jalousien, Rollos und Lamellenvorhänge. Beratung vor Ort, Aufmaß und Montage vom Meisterbetrieb."
         canonical="/sonnenschutz"
         keywords="Sonnenschutz Kreuzau, Plissees Düren, Jalousien Kreuzau, Rollos NRW, Wabenplissee"
       />
@@ -64,7 +64,7 @@ export default function Sonnenschutz() {
               <span className="mx-2">/</span>
               <span>Sonnenschutz</span>
             </nav>
-            <h1 className="text-primary-foreground mb-6">Sonnenschutz</h1>
+            <h1 className="text-primary-foreground mb-6">Sonnenschutz nach Maß in Kreuzau &amp; Düren</h1>
             <p className="text-xl text-primary-foreground/90 leading-relaxed">
               Optimaler Licht- und Wärmeschutz für Ihre Räume. Ich biete hochwertige
               Sonnenschutzlösungen in der gesamten Region – individuell beraten,

@@ -19,8 +19,8 @@ export default function Gardinen() {
   return (
     <Layout>
       <SEOHead
-        title="Gardinen in Kreuzau – Maßanfertigung & Beratung"
-        description="Gardinen in Kreuzau &amp; Düren: Maßanfertigung, Beratung vor Ort, Aufmaß &amp; Montage. Stoffe und Vorhänge vom Raumausstatter-Meisterbetrieb."
+        title="Gardinen nach Maß in Kreuzau &amp; Düren"
+        description="Gardinen und Vorhänge nach Maß in Kreuzau &amp; Düren: Stoffberatung bei Ihnen zu Hause, Aufmaß und Montage vom Raumausstatter-Meisterbetrieb. Tel. 02422 504344."
         canonical="/gardinen"
         keywords="Gardinen Kreuzau, Vorhänge Düren, Maßgardinen NRW, Stoffe Raumausstattung"
       />
@@ -36,9 +36,9 @@ export default function Gardinen() {
               <span className="mx-2">/</span>
               <span>Gardinen</span>
             </nav>
-            <h1 className="text-primary-foreground mb-6">Gardinen</h1>
+            <h1 className="text-primary-foreground mb-6">Gardinen nach Maß in Kreuzau &amp; Düren</h1>
             <p className="text-xl text-primary-foreground/90 leading-relaxed">
-              Maßgefertigte Gardinen für Ihr Zuhause in Kreuzau. Ich berate Sie persönlich, 
+              Maßgefertigte Gardinen für Ihr Zuhause in Kreuzau, Düren und Umgebung. Ich berate Sie persönlich, 
               nehme präzise Maß und montiere Ihre neuen Gardinen fachgerecht – 
               alles aus einer Hand.
             </p>

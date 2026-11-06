@@ -75,6 +75,11 @@ export function Footer() {
                   Partner
                 </Link>
               </li>
+              <li>
+                <Link to="/raumausstatter-dueren" className="hover:text-accent transition-colors">
+                  Raumausstatter Düren
+                </Link>
+              </li>
             </ul>
           </div>
 

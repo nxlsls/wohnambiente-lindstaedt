@@ -67,8 +67,8 @@ export default function Index() {
   return (
     <Layout>
       <SEOHead
-        title="Raumausstattung in Kreuzau"
-        description="Wohnambiente Lindstädt – Raumausstattung in Kreuzau, Düren &amp; NRW: Insektenschutz, Sonnenschutz, Gardinen, Polsterei. Meisterbetrieb mit Beratung vor Ort."
+        title="Raumausstatter in Kreuzau bei Düren"
+        description="Raumausstattermeisterin Verena Lindstädt in Kreuzau bei Düren: Gardinen, Sonnenschutz, Insektenschutz und Polsterei nach Maß. Beratung bei Ihnen zu Hause – Tel. 02422 504344."
         canonical="/"
         keywords="Raumausstattung Kreuzau, Gardinen Düren, Insektenschutz Kreuzau, Sonnenschutz NRW, Polsterei Düren, Raumausstatter Meisterbetrieb"
       />
@@ -88,6 +88,9 @@ export default function Index() {
           <div className="max-w-2xl">
             <h1 className="text-primary-foreground mb-6 animate-fade-up">
               Wohnambiente<br />Lindstädt
+              <span className="block mt-4 text-2xl md:text-3xl font-body font-normal text-primary-foreground/90">
+                Raumausstattung in Kreuzau &amp; Düren
+              </span>
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed animate-fade-up" style={{ animationDelay: "0.1s" }}>
               Ich bin Verena Lindstädt – Raumausstattermeisterin seit 2001. 
@@ -200,7 +203,9 @@ export default function Index() {
               <p>
                 Als Raumausstatterin bin ich in einem großen Einzugsgebiet für Sie unterwegs:
                 Von <strong>Heinsberg</strong> über <strong>Düsseldorf</strong> und <strong>Remscheid</strong> bis
-                nach <strong>Bonn</strong> und in die <strong>Eifel</strong>. Natürlich auch in <strong>Kreuzau</strong>, <strong>Düren</strong>, <strong>Jülich</strong> und allen umliegenden Orten.
+                nach <strong>Bonn</strong> und in die <strong>Eifel</strong>. Natürlich auch in <strong>Kreuzau</strong>,{" "}
+                <Link to="/raumausstatter-dueren" className="text-accent hover:underline"><strong>Düren</strong></Link>,{" "}
+                <strong>Jülich</strong> und allen umliegenden Orten.
                 Gerne komme ich zu Ihnen nach Hause für eine unverbindliche Beratung vor Ort.
               </p>
               <p>
