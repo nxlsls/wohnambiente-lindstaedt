@@ -1,75 +1,58 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import type { ReactNode } from "react";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
-import { ScrollToTop } from "./components/ScrollToTop";
-import Index from "./pages/Index";
-import UeberMich from "./pages/UeberMich";
-import Leistungen from "./pages/Leistungen";
-import Insektenschutz from "./pages/Insektenschutz";
-import Sonnenschutz from "./pages/Sonnenschutz";
-import Gardinen from "./pages/Gardinen";
-import Polsterei from "./pages/Polsterei";
-import RaumausstatterDueren from "./pages/RaumausstatterDueren";
-import Partner from "./pages/Partner";
-import Kontakt from "./pages/Kontakt";
-import Impressum from "./pages/Impressum";
-import Datenschutz from "./pages/Datenschutz";
-import NotFound from "./pages/NotFound";
+import { useEffect, useRef, useState } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { BottomBar, Frame } from './components/Frame'
+import { Home } from './pages/Home'
+import { ServicePage } from './pages/ServicePage'
+import { Dueren } from './pages/Dueren'
+import { Datenschutz, Impressum } from './pages/Legal'
+import { NotFound } from './pages/NotFound'
+import { SERVICE_PAGES } from './pages-data'
+import { fullTitle } from './seo'
 
-const queryClient = new QueryClient();
+gsap.registerPlugin(ScrollTrigger)
 
-export function AppRoutes() {
+function Page({ path }: { path: string }) {
+  if (path === '/') return <Home />
+  const service = SERVICE_PAGES.find((s) => `/${s.slug}` === path)
+  if (service) return <ServicePage page={service} />
+  if (path === '/raumausstatter-dueren') return <Dueren />
+  if (path === '/impressum') return <Impressum />
+  if (path === '/datenschutz') return <Datenschutz />
+  return <NotFound />
+}
+
+export default function App({ path }: { path: string }) {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const mainRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    // The built pages carry their title in the HTML; in development it is set here.
+    document.title = fullTitle(path)
+    // Measure trigger positions again once the real fonts and photos are in.
+    document.fonts.ready.then(() => ScrollTrigger.refresh())
+    const onLoad = () => ScrollTrigger.refresh()
+    window.addEventListener('load', onLoad)
+    return () => window.removeEventListener('load', onLoad)
+  }, [path])
+
   return (
     <>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/ueber-mich" element={<UeberMich />} />
-        <Route path="/leistungen" element={<Leistungen />} />
-        <Route path="/insektenschutz" element={<Insektenschutz />} />
-        <Route path="/sonnenschutz" element={<Sonnenschutz />} />
-        <Route path="/gardinen" element={<Gardinen />} />
-        <Route path="/polsterei" element={<Polsterei />} />
-        <Route path="/raumausstatter-dueren" element={<RaumausstatterDueren />} />
-        <Route path="/partner" element={<Partner />} />
-        <Route path="/kontakt" element={<Kontakt />} />
-        <Route path="/impressum" element={<Impressum />} />
-        <Route path="/datenschutz" element={<Datenschutz />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <a
+        className="skip-link"
+        href="#main"
+        onClick={(e) => {
+          e.preventDefault()
+          mainRef.current?.focus()
+        }}
+      >
+        Zum Inhalt springen
+      </a>
+      <Frame open={menuOpen} onOpenChange={setMenuOpen} home={path === '/'} />
+      <main id="main" ref={mainRef} tabIndex={-1} inert={menuOpen}>
+        <Page path={path} />
+      </main>
+      <BottomBar />
     </>
-  );
+  )
 }
-
-interface AppProvidersProps {
-  children: ReactNode;
-  helmetContext?: object;
-}
-
-export function AppProviders({ children, helmetContext }: AppProvidersProps) {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <HelmetProvider context={helmetContext}>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          {children}
-        </TooltipProvider>
-      </HelmetProvider>
-    </QueryClientProvider>
-  );
-}
-
-const App = () => (
-  <AppProviders>
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
-      <AppRoutes />
-    </BrowserRouter>
-  </AppProviders>
-);
-
-export default App;

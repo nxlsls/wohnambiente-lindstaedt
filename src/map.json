@@ -1,0 +1,36 @@
+{
+  "shop": {
+    "lat": 50.7298483,
+    "lon": 6.4595241
+  },
+  "labels": [
+    {
+      "text": "Rur",
+      "x": 50.53,
+      "y": 69.55,
+      "angle": -35.6,
+      "kind": "river"
+    },
+    {
+      "text": "Rurstraße",
+      "x": 64.1,
+      "y": 57.11,
+      "angle": 9.8,
+      "kind": "street"
+    },
+    {
+      "text": "Rauvsauel",
+      "x": 79.09,
+      "y": 67.76,
+      "angle": 34,
+      "kind": "street"
+    },
+    {
+      "text": "Bogheimer Weg",
+      "x": 19.07,
+      "y": 20.07,
+      "angle": -5.4,
+      "kind": "street"
+    }
+  ]
+}

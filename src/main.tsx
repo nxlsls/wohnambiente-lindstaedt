@@ -1,24 +1,25 @@
-import { createRoot, hydrateRoot } from "react-dom/client";
-import App from "./App.tsx";
-import "@fontsource/playfair-display/latin-400.css";
-import "@fontsource/playfair-display/latin-500.css";
-import "@fontsource/playfair-display/latin-600.css";
-import "@fontsource/playfair-display/latin-700.css";
-import "@fontsource/source-sans-3/latin-300.css";
-import "@fontsource/source-sans-3/latin-400.css";
-import "@fontsource/source-sans-3/latin-500.css";
-import "@fontsource/source-sans-3/latin-600.css";
-import "@fontsource/source-sans-3/latin-700.css";
-import "./index.css";
+import { StrictMode } from 'react'
+import { createRoot, hydrateRoot } from 'react-dom/client'
+import '@fontsource-variable/raleway'
+import '@fontsource-variable/source-sans-3'
+import './styles.css'
+import App from './App'
+import { routeFor } from './pages-data'
 
-const container = document.getElementById("root")!;
-const prerenderedPath = container.dataset.prerenderedPath;
+const root = document.getElementById('root')!
+const path = routeFor(location.pathname)
+const app = (
+  <StrictMode>
+    <App path={path} />
+  </StrictMode>
+)
 
-// Nur hydratisieren, wenn das vorgerenderte HTML zur aktuellen URL passt
-// (z. B. nicht bei alten "/?/seite"-Links, die erst clientseitig umgeschrieben werden).
-if (container.hasChildNodes() && prerenderedPath === window.location.pathname) {
-  hydrateRoot(container, <App />);
-} else {
-  container.innerHTML = "";
-  createRoot(container).render(<App />);
+// Built pages ship as prerendered HTML (readable for search engines without JavaScript);
+// React takes it over. In development the root is empty and React renders from scratch.
+if (root.firstElementChild && root.dataset.path === path) hydrateRoot(root, app)
+else {
+  root.textContent = ''
+  createRoot(root).render(app)
 }
+
+window.__waReady = true

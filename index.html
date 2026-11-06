@@ -2,129 +2,25 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <!-- GitHub Pages SPA redirect handler -->
-    <script type="text/javascript">
-      (function(l) {
-        if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) {
-            return s.replace(/~and~/g, '&')
-          }).join('?');
-          window.history.replaceState(null, null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      }(window.location))
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#1e2a3a" />
-    <meta name="author" content="Wohnambiente Lindstädt" />
-    <meta name="geo.region" content="DE-NW" />
-    <meta name="geo.placename" content="Kreuzau" />
+    <!--app-head-->
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#2A2B3C" />
     <link rel="icon" href="/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!--app-head-start-->
-    <title>Wohnambiente Lindstädt – Raumausstattung in Kreuzau</title>
-    <meta name="description" content="Wohnambiente Lindstädt – Raumausstattung in Kreuzau, Düren, NRW: Insektenschutz, Sonnenschutz, Gardinen, Polsterei. Meisterbetrieb mit Beratung vor Ort. Jetzt anfragen." />
-    
-    <meta property="og:title" content="Wohnambiente Lindstädt – Raumausstattung in Kreuzau" />
-    <meta property="og:description" content="Raumausstattung in Kreuzau &amp; Düren: Insektenschutz, Sonnenschutz, Gardinen, Polsterei. Meisterbetrieb – Beratung vor Ort." />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="de_DE" />
-    <meta property="og:site_name" content="Wohnambiente Lindstädt" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <!--app-head-end-->
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HomeAndConstructionBusiness",
-      "@id": "https://www.wohnambiente-lindstaedt.de/#business",
-      "name": "Wohnambiente Lindstädt",
-      "alternateName": ["Wohnambiente Lindstaedt", "Wohnambiente Lindstädt Raumausstattung", "Verena Lindstädt Raumausstattung"],
-      "description": "Raumausstatter in Kreuzau bei Düren: Gardinen, Sonnenschutz, Insektenschutz und Polsterei. Raumausstattermeisterin Verena Lindstädt – Beratung vor Ort, Aufmaß, Maßanfertigung und Montage.",
-      "image": "https://www.wohnambiente-lindstaedt.de/og-image.jpg",
-      "logo": "https://www.wohnambiente-lindstaedt.de/logo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Hoeschstraße 2",
-        "addressLocality": "Kreuzau",
-        "addressRegion": "Nordrhein-Westfalen",
-        "postalCode": "52372",
-        "addressCountry": "DE"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "50.746",
-        "longitude": "6.484"
-      },
-      "telephone": "+49-2422-504344",
-      "email": "info@wohnambiente-lindstaedt.de",
-      "url": "https://www.wohnambiente-lindstaedt.de/",
-      "priceRange": "$$",
-      "currenciesAccepted": "EUR",
-      "paymentAccepted": "Überweisung, EC-Karte, Bar",
-      "founder": {
-        "@type": "Person",
-        "name": "Verena Lindstädt",
-        "jobTitle": "Raumausstattermeisterin"
-      },
-      "foundingDate": "2018",
-      "areaServed": [
-        { "@type": "City", "name": "Kreuzau" },
-        { "@type": "City", "name": "Düren" },
-        { "@type": "City", "name": "Jülich" },
-        { "@type": "City", "name": "Nideggen" },
-        { "@type": "City", "name": "Heimbach" },
-        { "@type": "City", "name": "Vettweiß" },
-        { "@type": "City", "name": "Langerwehe" }
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Raumausstattung Leistungen",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Insektenschutz",
-              "description": "Spannrahmen, Drehrahmen, Pendeltüren, Schiebetüren und Lichtschachtabdeckungen"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Sonnenschutz",
-              "description": "Plissees, Wabenplissees, Jalousien, Rollos und Lamellenvorhänge"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Gardinen",
-              "description": "Maßgefertigte Gardinen mit persönlicher Beratung und professioneller Montage"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Polsterei",
-              "description": "Neubezug von Möbeln, Polsterarbeiten und Restaurierung"
-            }
-          }
-        ]
-      },
-      "sameAs": ["https://www.facebook.com/wohnambientelindstaedtvl/?locale=de_DE"]
-    }
+    <!-- Hides the hero words until they rise in; removed again if the app does not start. -->
+    <script>
+      if (matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+        document.documentElement.classList.add('motion')
+        setTimeout(function () {
+          if (!window.__waReady) document.documentElement.classList.remove('motion')
+        }, 3000)
+      }
     </script>
   </head>
-
   <body>
-    <div id="root"></div>
+    <div id="root"><!--app--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

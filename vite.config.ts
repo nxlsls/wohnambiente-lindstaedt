@@ -1,22 +1,13 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
-import path from "path";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  base: "/",
-  server: {
-    host: "::",
-    port: 8080,
-  },
+  // The site lives at the root of www.wohnambiente-lindstaedt.de; absolute paths keep assets
+  // working on every page (/gardinen, /impressum, …) and on the 404 page.
+  base: '/',
   plugins: [react()],
-  ssr: {
-    // Für das Prerendering alle Abhängigkeiten mitbündeln (vermeidet ESM/CJS-Probleme in Node)
-    noExternal: true,
-  },
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-});
+  // The prerender bundle includes all dependencies, so Node never has to load GSAP's browser files.
+  ssr: { noExternal: true },
+  server: { port: 5190 },
+  preview: { port: 5191 },
+})

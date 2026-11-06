@@ -1,0 +1,1927 @@
+/* Wohnambiente Lindstädt — Entwurf im Stil „Mirror Frame“, angepasst:
+   der Rahmen ist ein Fensterrahmen in Navy, Schrift wie im Logo (Raleway), Farben aus Logo und Visitenkarte.
+   Bewusst ruhig: größere Schrift, wenig Bewegung, Telefonnummer immer sichtbar. */
+
+:root {
+  --frame: #2a2b3c; /* Navy der Visitenkarte */
+  --linen: #f6f5f0; /* Seitenhintergrund */
+  --linen-2: #e9efea; /* heller Salbei-Ton für Wechselflächen */
+  --ink: #2a2b3c;
+  --mute: #4f5361;
+  --line: #c9d5ce;
+  --sage: #8ab4a8; /* Logo-Grün: auf Navy */
+  --sage-deep: #3d6a5d; /* Logo-Grün abgedunkelt: Text und Links auf hellem Grund */
+  --sage-light: #d8e4dc;
+  --linen-70: rgb(246 245 240 / 0.74);
+  --linen-20: rgb(246 245 240 / 0.2);
+
+  --ft: 64px;
+  --fs: 14px;
+  --fb: 52px;
+  --pad: 5vw;
+
+  --display: 'Raleway Variable', ui-sans-serif, system-ui, sans-serif;
+  --text: 'Source Sans 3 Variable', ui-sans-serif, system-ui, sans-serif;
+
+  color-scheme: light;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --ft: 58px;
+    --fs: 8px;
+    --fb: 52px;
+    --pad: 6vw;
+  }
+}
+
+/* ---------- Base ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--frame);
+  overflow-x: clip;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--linen);
+  color: var(--ink);
+  font-family: var(--text);
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ol,
+ul,
+dl,
+dd,
+figure {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: inherit;
+  font-weight: inherit;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Raleway as in the logo; lining figures so phone numbers and years sit on the line. */
+.poster {
+  font-family: var(--display);
+  font-weight: 500;
+  font-variant-numeric: lining-nums;
+  letter-spacing: -0.025em;
+  line-height: 0.92;
+}
+
+.label {
+  font-family: var(--display);
+  font-weight: 600;
+  font-variant-numeric: lining-nums;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Light text blended with "difference": navy on linen and bright photo areas, light on dark ones. */
+.blend-word {
+  color: #cccab4;
+  mix-blend-mode: difference;
+}
+
+/* The logo's divider: a hairline, the asterisk, a hairline. */
+.star-rule {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--sage-deep);
+}
+
+.star-rule::after {
+  content: '';
+  flex: 0 1 64px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.6;
+}
+
+.star-rule::before {
+  content: '*';
+  order: 2;
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* The fine diagonal stripes of the business card. */
+.stripes {
+  background: repeating-linear-gradient(135deg, var(--sage-light) 0 1.5px, transparent 1.5px 9px);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--sage-deep);
+  outline-offset: 3px;
+}
+
+.topbar :focus-visible,
+.bottombar :focus-visible,
+.menu :focus-visible,
+.products :focus-visible {
+  outline-color: var(--sage);
+}
+
+[tabindex='-1']:focus {
+  outline: none;
+}
+
+.skip-link {
+  position: fixed;
+  left: 12px;
+  top: 12px;
+  z-index: 70;
+  background: var(--linen);
+  color: var(--ink);
+  padding: 10px 14px;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+/* ---------- The window frame ---------- */
+
+.window {
+  position: fixed;
+  top: var(--ft);
+  right: var(--fs);
+  bottom: var(--fb);
+  left: var(--fs);
+  border-radius: 16px;
+  box-shadow: 0 0 0 200vmax var(--frame);
+  pointer-events: none;
+  z-index: 40;
+}
+
+.topbar,
+.bottombar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: var(--frame);
+  color: var(--linen);
+  padding: 0 max(var(--fs), 16px);
+}
+
+.topbar {
+  top: 0;
+  height: var(--ft);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  column-gap: 32px;
+  align-items: center;
+}
+
+.brand {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 44px;
+}
+
+.brand-mark {
+  height: 32px;
+  width: auto;
+}
+
+/* The name as on the logo: WOHNAMBIENTE in light, LINDSTÄDT in sage. */
+.brand-name {
+  display: flex;
+  column-gap: 0.6em;
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.brand-sub {
+  color: var(--sage);
+}
+
+.topbar-nav {
+  display: none;
+  gap: 36px;
+}
+
+.topbar-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--linen-70);
+  transition: color 150ms;
+}
+
+@media (min-width: 1180px) {
+  .topbar-nav {
+    display: flex;
+  }
+}
+
+.menu-btn {
+  grid-column: 3;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 0 4px;
+  font-size: 14px;
+}
+
+.menu-icon {
+  position: relative;
+  width: 16px;
+  height: 12px;
+}
+
+.menu-icon span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 16px;
+  height: 1.5px;
+  margin-top: -0.75px;
+  background: currentColor;
+  transition: transform 300ms;
+}
+
+.menu-icon span:first-child {
+  transform: translateY(-4px);
+}
+
+.menu-icon span:last-child {
+  transform: translateY(4px);
+}
+
+.menu-btn[aria-expanded='true'] .menu-icon span:first-child {
+  transform: rotate(45deg);
+}
+
+.menu-btn[aria-expanded='true'] .menu-icon span:last-child {
+  transform: rotate(-45deg);
+}
+
+.bottombar {
+  bottom: 0;
+  height: var(--fb);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.bottombar-note {
+  min-width: 0;
+  color: var(--linen-70);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bottombar-cta {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 15px;
+  color: var(--sage);
+  transition: color 150ms;
+}
+
+@media (max-width: 767px) {
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .brand-mark {
+    height: 26px;
+  }
+
+  /* Phone: two lines like the logo. */
+  .brand-name {
+    flex-direction: column;
+    font-size: 14px;
+    letter-spacing: 0.16em;
+  }
+
+  .brand-sub {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+  }
+}
+
+@media (max-width: 400px) {
+  .bottombar-cta-verb {
+    display: none;
+  }
+}
+
+/* The menu, written on the frame */
+
+.menu {
+  position: fixed;
+  top: calc(var(--ft) + 3vh);
+  left: max(var(--fs), 20px);
+  z-index: 50;
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Each row masks its word; the height term shrinks the words on short screens so all six
+   plus the contact lines stay on the frame above the corner window. */
+.menu-list li {
+  overflow: hidden;
+  padding-top: 0.1em;
+  margin-top: -0.1em;
+  font-size: min(6.4vw, calc((100vh - 400px) / 5.6));
+}
+
+.menu-link {
+  display: block;
+  padding: 4px 0;
+  font-weight: 400;
+  color: var(--linen);
+  transition: color 150ms;
+}
+
+.menu-link:focus-visible {
+  outline-offset: -3px;
+}
+
+.menu-ctas {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.menu-cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 14px;
+  color: var(--sage);
+  transition: color 150ms;
+}
+
+.menu-legal {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.menu-legal a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--linen-70);
+  transition: color 150ms;
+}
+
+@media (max-width: 767px) {
+  .menu-list li {
+    font-size: min(11vw, calc((70vh - 330px) / 5.6));
+  }
+
+  .menu-ctas {
+    margin-top: 14px;
+  }
+}
+
+main {
+  padding-top: var(--ft);
+  padding-bottom: var(--fb);
+  outline: none;
+}
+
+main [id] {
+  scroll-margin-top: calc(var(--ft) + 24px);
+}
+
+/* ---------- Buttons and links ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 26px;
+  font-size: 14px;
+  background: var(--frame);
+  color: var(--linen);
+  border: 1.5px solid var(--frame);
+  transition:
+    background-color 150ms,
+    color 150ms;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  font-size: 14px;
+  color: var(--sage-deep);
+}
+
+.text-link span {
+  transition: transform 150ms;
+}
+
+/* ---------- Hero: the window opens onto a room ("Designed for living") ---------- */
+
+/* The photo fills the whole window; a navy shade from the left (phone: from the bottom)
+   carries light text. Contrast was checked against the photo: at least 6:1 for the text areas. */
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: max(calc(100svh - var(--ft) - var(--fb)), 560px);
+  padding: clamp(40px, 12svh, 140px) var(--pad) 0;
+  overflow: hidden;
+  background: var(--frame);
+  color: var(--linen);
+}
+
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 60%;
+}
+
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgb(42 43 60 / 0.86) 0%, rgb(42 43 60 / 0.7) 45%, rgb(42 43 60 / 0) 78%),
+    linear-gradient(0deg, rgb(42 43 60 / 0.72) 0%, rgb(42 43 60 / 0) 30%);
+}
+
+.hero-content {
+  position: relative;
+}
+
+.hero-eyebrow {
+  display: block;
+  color: var(--sage-light);
+}
+
+/* "Wohnambiente" is 6.8 em wide in Raleway Light: 8.2vw keeps it within ~56 % of the window. */
+.hero-headline {
+  display: block;
+  margin-top: 20px;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(3rem, min(8.2vw, 11.5svh), 8.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+}
+
+/* Each line is a mask the words rise out of; the padding keeps descenders visible. */
+.h-line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+
+.h-word {
+  display: block;
+}
+
+/* Set by the inline <head> script: the words wait below their masks until they rise in. */
+.motion .h-word {
+  transform: translateY(105%);
+}
+
+.hero-intro {
+  margin-top: 26px;
+  max-width: 31rem;
+  font-size: 1.1875rem;
+  line-height: 1.6;
+  color: rgb(246 245 240 / 0.9);
+}
+
+.hero-actions {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 32px;
+}
+
+.btn--light {
+  background: var(--linen);
+  border-color: var(--linen);
+  color: var(--ink);
+}
+
+/* Like the underlined link in the reference, but with the full number to read and tap. */
+.hero-phone {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  font-size: 14px;
+  color: var(--linen);
+  text-decoration: underline;
+  text-decoration-color: var(--sage);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 8px;
+}
+
+.hero-points {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 0;
+  margin-top: 48px;
+  padding: 18px 0 22px;
+  border-top: 1px solid rgb(246 245 240 / 0.25);
+}
+
+.hero-points li {
+  color: rgb(246 245 240 / 0.85);
+}
+
+/* Tablets: the text reaches further into the photo, so the shade reaches further too. */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-shade {
+    background:
+      linear-gradient(90deg, rgb(42 43 60 / 0.88) 0%, rgb(42 43 60 / 0.78) 60%, rgb(42 43 60 / 0) 95%),
+      linear-gradient(0deg, rgb(42 43 60 / 0.72) 0%, rgb(42 43 60 / 0) 30%);
+  }
+}
+
+/* The asterisk from the logo between the points. */
+.hero-points li + li::before {
+  content: '*';
+  margin: 0 18px;
+  color: var(--sage);
+}
+
+@media (max-width: 767px) {
+  .hero {
+    justify-content: flex-end;
+    min-height: max(calc(100svh - var(--ft) - var(--fb)), 480px);
+    padding-top: 0;
+  }
+
+  /* Phone: show the window with the wooden blinds. */
+  .hero-photo img {
+    object-position: 68% 50%;
+  }
+
+  .hero-shade {
+    background: linear-gradient(0deg, rgb(42 43 60 / 0.6) 0%, rgb(42 43 60 / 0) 50%);
+  }
+
+  /* The text block carries its own shade, so it stays readable however tall the text gets
+     on small phones; the photo shows above it. */
+  .hero-content {
+    padding-bottom: 24px;
+    isolation: isolate;
+  }
+
+  .hero-content::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -140px;
+    right: calc(var(--pad) * -1);
+    bottom: 0;
+    left: calc(var(--pad) * -1);
+    background: linear-gradient(0deg, rgb(42 43 60 / 0.92) 0, rgb(42 43 60 / 0.86) calc(100% - 140px), rgb(42 43 60 / 0) 100%);
+  }
+
+  .hero-headline {
+    margin-top: 14px;
+    font-size: 12vw;
+  }
+
+  .hero-intro {
+    margin-top: 18px;
+    font-size: 1.0625rem;
+  }
+
+  .hero-actions {
+    margin-top: 22px;
+    gap: 4px 24px;
+  }
+
+  .hero-actions .btn {
+    flex: 1 1 100%;
+  }
+
+  .hero-points {
+    display: none;
+  }
+}
+
+@media (max-width: 479px) {
+  .btn-more {
+    display: none;
+  }
+}
+
+/* ---------- Statement ---------- */
+
+.statement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 90svh;
+  overflow: hidden;
+  padding: 7rem var(--pad);
+}
+
+.statement > .label {
+  margin-bottom: 28px;
+}
+
+.statement-title {
+  font-size: 8.4vw;
+  line-height: 1;
+}
+
+.st-line {
+  display: block;
+}
+
+.st-line--right {
+  text-align: right;
+  color: var(--sage-deep);
+}
+
+.statement-foot {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px 48px;
+}
+
+.statement-text {
+  max-width: 38rem;
+  font-size: 1.1875rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 767px) {
+  .statement {
+    padding: 5rem var(--pad);
+  }
+
+  .statement-title {
+    font-size: 10.6vw;
+  }
+
+  .statement-text {
+    font-size: 1.0625rem;
+  }
+}
+
+/* ---------- Service chapters ---------- */
+
+.chapter {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  --photo-w: 52%;
+  --anchor: 48%;
+}
+
+.chapter--alt {
+  background: var(--linen-2);
+}
+
+.chapter-photo {
+  position: absolute;
+  overflow: hidden;
+  top: 10%;
+  height: 74%;
+  width: var(--photo-w);
+}
+
+.chapter-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+}
+
+.chapter[data-side='right'] .chapter-photo {
+  right: 0;
+}
+
+.chapter[data-side='left'] .chapter-photo {
+  left: 0;
+}
+
+.chapter-word {
+  position: absolute;
+  top: 30%;
+  white-space: nowrap;
+  font-size: var(--word-size);
+  line-height: 0.92;
+}
+
+.chapter[data-side='right'] .chapter-word {
+  left: var(--anchor);
+  transform: translateX(-50%);
+}
+
+.chapter[data-side='left'] .chapter-word {
+  right: var(--anchor);
+  transform: translateX(50%);
+}
+
+.chapter-text {
+  position: absolute;
+  bottom: 6%;
+  max-width: 27rem;
+  padding: 0 var(--pad);
+}
+
+.chapter[data-side='right'] .chapter-text {
+  left: 0;
+}
+
+.chapter[data-side='left'] .chapter-text {
+  right: 0;
+}
+
+.chapter-text .label {
+  color: var(--sage-deep);
+}
+
+.chapter-text p + p {
+  margin-top: 12px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+  .chapter {
+    --photo-w: 80%;
+    --anchor: 22%;
+    --word-size: var(--word-size-m) !important;
+    min-height: 0;
+    height: max(100svh, 720px);
+  }
+
+  .chapter-photo {
+    top: 8%;
+    height: 52%;
+  }
+
+  .chapter-word {
+    top: 46%;
+  }
+
+  .chapter[data-side='right'] .chapter-word {
+    left: 50%;
+  }
+
+  .chapter[data-side='left'] .chapter-word {
+    right: 50%;
+  }
+
+  .chapter-text {
+    bottom: 5%;
+    max-width: none;
+  }
+
+  .chapter-text p + p {
+    font-size: 1.0625rem;
+  }
+}
+
+/* ---------- Section heads ---------- */
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px 48px;
+}
+
+.section-title {
+  font-size: 7.5vw;
+  line-height: 0.92;
+}
+
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 13vw;
+  }
+}
+
+/* ---------- Products (on the frame colour) ---------- */
+
+.products {
+  background: var(--frame);
+  color: var(--linen);
+  padding: 8rem var(--pad);
+}
+
+.products-note {
+  max-width: 26rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--linen-70);
+}
+
+.pg {
+  margin-top: 6rem;
+}
+
+.pg-count {
+  color: var(--sage);
+}
+
+.pg-title {
+  margin-top: 12px;
+  font-size: 4.2vw;
+  line-height: 1;
+}
+
+.pg-cards {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem 2rem;
+}
+
+.pg-card-photo {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--linen-20);
+}
+
+.pg-card-photo img,
+.pg-split-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pg-card-name {
+  margin-top: 18px;
+  font-size: 1.625rem;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.pg-card-text {
+  margin-top: 6px;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  color: var(--linen-70);
+}
+
+.pg-more {
+  margin-top: 2.5rem;
+  padding-top: 18px;
+  border-top: 1px solid var(--linen-20);
+  color: var(--linen-70);
+}
+
+.pg-split {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  gap: 2rem 4rem;
+  align-items: start;
+}
+
+.pg-split--text {
+  grid-template-columns: 1fr;
+}
+
+.pg-split-photo {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.pg-split-photo--portrait {
+  aspect-ratio: 4 / 5;
+  max-width: 26rem;
+}
+
+.pg-split-caption {
+  margin-top: 10px;
+  font-size: 0.9375rem;
+  color: var(--linen-70);
+}
+
+.pg-list {
+  display: grid;
+}
+
+.pg-split--text .pg-list {
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  column-gap: 2rem;
+}
+
+.pg-list li {
+  padding: 20px 0 24px;
+  border-top: 1px solid var(--linen-20);
+}
+
+.pg-list-name {
+  font-size: 1.625rem;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.pg-list-text {
+  margin-top: 6px;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  color: var(--linen-70);
+}
+
+@media (max-width: 1023px) {
+  .pg-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .products {
+    padding: 5.5rem var(--pad);
+  }
+
+  .pg {
+    margin-top: 4.5rem;
+  }
+
+  .pg-title {
+    font-size: 8.6vw;
+  }
+
+  .pg-cards {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .pg-split,
+  .pg-split--text .pg-list {
+    grid-template-columns: 1fr;
+  }
+
+  .pg-card-name,
+  .pg-list-name {
+    font-size: 1.4375rem;
+  }
+}
+
+/* ---------- Brands: names set like the logo, no supplier logos needed ---------- */
+
+.brands {
+  padding: 7rem var(--pad);
+}
+
+.brands-intro {
+  max-width: 28rem;
+  line-height: 1.6;
+  color: var(--mute);
+}
+
+.brand-list {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
+}
+
+.brand-list li {
+  display: flex;
+  align-items: center;
+  min-height: 84px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  font-family: var(--display);
+  font-size: 1.625rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.brand-list .brand-more {
+  font-size: 13px;
+  color: var(--sage-deep);
+}
+
+@media (max-width: 1023px) {
+  .brand-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .brands {
+    padding: 5.5rem var(--pad);
+  }
+
+  .brand-list {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.25rem;
+    margin-top: 2.5rem;
+  }
+
+  .brand-list li {
+    min-height: 64px;
+    font-size: 1.25rem;
+  }
+}
+
+/* ---------- Steps ---------- */
+
+.steps {
+  padding: 8rem var(--pad);
+  background: var(--linen-2);
+}
+
+.steps-intro {
+  max-width: 26rem;
+  line-height: 1.6;
+  color: var(--mute);
+}
+
+.step-list {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem 2.5rem;
+}
+
+.step {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+
+.step-no {
+  display: block;
+  font-size: 5.5rem;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--sage-deep);
+}
+
+.step-title {
+  margin-top: 18px;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.step-text {
+  margin-top: 10px;
+  line-height: 1.6;
+  color: var(--mute);
+}
+
+@media (max-width: 1023px) {
+  .step-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .steps {
+    padding: 5.5rem var(--pad);
+  }
+
+  .step-list {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .step {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr;
+    column-gap: 12px;
+  }
+
+  .step-no {
+    grid-row: span 2;
+    font-size: 3.25rem;
+  }
+
+  .step-title {
+    margin-top: 2px;
+    font-size: 1.375rem;
+  }
+}
+
+/* ---------- About ---------- */
+
+.about {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 3rem 6vw;
+  align-items: center;
+  padding: 8rem var(--pad);
+}
+
+/* Like the business card: a white card in a striped border. */
+.about-card {
+  padding: 22px;
+  border-radius: 10px;
+}
+
+.about-photo {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-title {
+  margin-top: 20px;
+  font-size: 5.6vw;
+}
+
+.about-role {
+  margin-top: 14px;
+  color: var(--mute);
+}
+
+.about-text {
+  margin-top: 20px;
+  max-width: 38rem;
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+.milestones {
+  margin-top: 2.5rem;
+  max-width: 38rem;
+}
+
+.milestones > div {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  gap: 16px;
+  align-items: baseline;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+
+.milestones dt {
+  font-size: 1.5rem;
+  color: var(--sage-deep);
+}
+
+@media (max-width: 767px) {
+  .about {
+    grid-template-columns: 1fr;
+    padding: 5.5rem var(--pad);
+  }
+
+  .about-card {
+    padding: 14px;
+    max-width: 22rem;
+  }
+
+  .about-title {
+    font-size: 11vw;
+  }
+
+  .about-text {
+    font-size: 1.0625rem;
+  }
+
+  .milestones > div {
+    grid-template-columns: 4.5rem 1fr;
+  }
+}
+
+/* ---------- Questions ---------- */
+
+.questions {
+  padding: 8rem var(--pad);
+  background: var(--linen-2);
+}
+
+/* All answers stay open: nothing to click, nothing hidden. */
+.faq {
+  margin-top: 3.5rem;
+  display: grid;
+  column-gap: 4rem;
+  row-gap: 2.5rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.faq > div {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+
+.faq dt {
+  font-size: 1.625rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.faq dd {
+  margin-top: 12px;
+  max-width: 34rem;
+  line-height: 1.65;
+  color: var(--mute);
+}
+
+@media (max-width: 767px) {
+  .questions {
+    padding: 5.5rem var(--pad);
+  }
+
+  .faq {
+    grid-template-columns: 1fr;
+  }
+
+  .faq dt {
+    font-size: 1.375rem;
+  }
+}
+
+/* ---------- Kontakt with street map ---------- */
+
+.visit {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100svh;
+}
+
+.visit-map {
+  position: relative;
+  overflow: hidden;
+  background: #eef2ee;
+}
+
+/* Desktop: the map stays in view while the contact details scroll past. */
+@media (min-width: 768px) {
+  .visit-map {
+    position: sticky;
+    top: var(--ft);
+    align-self: start;
+    height: calc(100svh - var(--ft) - var(--fb));
+  }
+}
+
+.map {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  container-type: size;
+}
+
+.map:focus-visible {
+  outline-offset: -4px;
+}
+
+/* A square map that always covers the box, with the shop in the middle. */
+.map-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: max(100cqw, 100cqh);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+}
+
+.map-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+.map-label {
+  position: absolute;
+  white-space: nowrap;
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+.map-label--river {
+  font-size: 13px;
+  letter-spacing: 0.5em;
+  color: var(--sage-deep);
+}
+
+.map-pin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  margin: -11px 0 0 -11px;
+  background: var(--sage);
+  border: 4px solid var(--frame);
+  border-radius: 50%;
+}
+
+.map-pin-tag {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 9px 13px;
+  white-space: nowrap;
+  background: var(--frame);
+  color: var(--linen);
+}
+
+.map-actions {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+}
+
+.map-credit {
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  padding: 4px 8px;
+  font-size: 12px;
+  background: rgb(246 245 240 / 0.88);
+  color: var(--mute);
+}
+
+.visit-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 6rem var(--pad);
+}
+
+.visit-title {
+  font-size: 7vw;
+}
+
+.visit-address {
+  margin-top: 24px;
+  font-style: normal;
+  font-size: 1.1875rem;
+  line-height: 1.6;
+}
+
+.visit-cta {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 16px;
+  font-size: 3.5rem;
+  line-height: 1.05;
+  color: var(--sage-deep);
+}
+
+.visit-cta .arrow {
+  display: inline-block;
+  transition: transform 150ms;
+}
+
+.visit-lines {
+  margin-top: 20px;
+  max-width: 30rem;
+}
+
+.visit-lines li {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 12px;
+  align-items: center;
+  min-height: 52px;
+  border-top: 1px solid var(--line);
+}
+
+.visit-lines .label {
+  color: var(--mute);
+}
+
+.visit-lines a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  color: var(--sage-deep);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+
+.visit-note {
+  margin-top: 18px;
+  max-width: 30rem;
+  line-height: 1.6;
+  color: var(--mute);
+}
+
+.visit-area {
+  margin-top: 16px;
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.visit-area span {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--text);
+  font-weight: 400;
+  font-size: 1.0625rem;
+  color: var(--mute);
+}
+
+.site-foot {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.foot-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 28px;
+}
+
+.foot-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.smallprint {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--mute);
+}
+
+@media (max-width: 767px) {
+  .visit {
+    grid-template-columns: 1fr;
+  }
+
+  .visit-map {
+    height: 56svh;
+  }
+
+  .map-actions {
+    left: 12px;
+    bottom: 12px;
+  }
+
+  .visit-body {
+    padding: 4.5rem var(--pad);
+  }
+
+  .visit-title {
+    font-size: 15vw;
+  }
+
+  .visit-cta {
+    font-size: 10.5vw;
+    white-space: nowrap;
+  }
+
+  .visit-lines li {
+    grid-template-columns: 6.5rem 1fr;
+  }
+
+  .visit-area {
+    font-size: 1.25rem;
+  }
+}
+
+/* ---------- Sub pages ---------- */
+
+.page-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: max(calc(78svh - var(--ft) - var(--fb)), 520px);
+  background: var(--frame);
+  color: var(--linen);
+}
+
+.page-hero-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem var(--pad);
+}
+
+.crumbs {
+  color: var(--linen-70);
+}
+
+.crumbs a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--sage-light);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.page-hero-title {
+  margin-top: 14px;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(2.5rem, 4.4vw, 4.75rem);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+}
+
+.page-hero-intro {
+  margin-top: 22px;
+  max-width: 32rem;
+  font-size: 1.1875rem;
+  line-height: 1.6;
+  color: rgb(246 245 240 / 0.9);
+}
+
+.page-hero-photo {
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+}
+
+.page-hero-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lead {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 3rem 6vw;
+  align-items: start;
+  padding: 7rem var(--pad);
+}
+
+.lead--alt {
+  background: var(--linen-2);
+}
+
+.lead--wide {
+  grid-template-columns: 1fr;
+}
+
+.lead-title {
+  margin-top: 20px;
+  font-size: clamp(2.25rem, 4.2vw, 4rem);
+  line-height: 1.04;
+}
+
+.lead-text {
+  margin-top: 20px;
+  max-width: 40rem;
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+.lead-features {
+  border-top: 1px solid var(--line);
+}
+
+.lead-features li {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.0625rem;
+}
+
+.lead-features li::before {
+  content: '*';
+  font-family: var(--display);
+  color: var(--sage-deep);
+}
+
+.dueren-services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem 4rem;
+}
+
+.dueren-services li {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+
+.dueren-services h3 {
+  font-size: 1.625rem;
+  line-height: 1.2;
+}
+
+.dueren-services p {
+  margin-top: 10px;
+  line-height: 1.6;
+  color: var(--mute);
+}
+
+.products--page .pg {
+  margin-top: 0;
+}
+
+.pg-card-features {
+  margin-top: 10px;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--sage);
+}
+
+.text-link--light {
+  margin-top: 2rem;
+  color: var(--sage);
+}
+
+.chapter-text .text-link {
+  margin-top: 6px;
+}
+
+.more {
+  padding: 5rem var(--pad);
+  background: var(--linen-2);
+}
+
+.more-list {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  column-gap: 2rem;
+}
+
+.more-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 72px;
+  border-top: 1px solid var(--line);
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.more-link span {
+  color: var(--sage-deep);
+  transition: transform 150ms;
+}
+
+.foot-links--legal {
+  margin-top: -6px;
+}
+
+/* ---------- Legal pages ---------- */
+
+.legal {
+  padding: 6rem var(--pad) 8rem;
+}
+
+.legal-title {
+  font-size: clamp(2.75rem, 7vw, 6rem);
+  line-height: 1;
+}
+
+.legal-body {
+  margin-top: 3rem;
+  max-width: 46rem;
+  line-height: 1.65;
+}
+
+.legal-body h2 {
+  margin-top: 2.5rem;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.legal-body h3 {
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+
+.legal-body p,
+.legal-body ul {
+  margin-top: 12px;
+  color: var(--mute);
+}
+
+.legal-body ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.legal-body a {
+  color: var(--sage-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1023px) {
+  .lead,
+  .dueren-services {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-hero {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .page-hero-photo {
+    order: -1;
+    height: 38svh;
+    min-height: 240px;
+  }
+
+  .page-hero-body {
+    padding: 2.5rem var(--pad) 3rem;
+  }
+
+  .page-hero-intro {
+    font-size: 1.0625rem;
+  }
+
+  .lead {
+    padding: 5rem var(--pad);
+  }
+
+  .more {
+    padding: 4rem var(--pad);
+  }
+
+  .more-link {
+    font-size: 1.3125rem;
+    min-height: 60px;
+  }
+
+  .legal {
+    padding: 4rem var(--pad) 6rem;
+  }
+}
+
+/* ---------- Hover (pointer devices only) ---------- */
+
+@media (hover: hover) {
+  .bottombar-cta:hover,
+  .menu-cta:hover {
+    color: var(--linen);
+  }
+
+  .menu-link:hover,
+  .menu-legal a:hover {
+    color: var(--sage);
+  }
+
+  .btn:hover {
+    background: var(--sage-deep);
+    border-color: var(--sage-deep);
+    color: var(--linen);
+  }
+
+  .btn--light:hover {
+    background: var(--sage);
+    border-color: var(--sage);
+    color: var(--ink);
+  }
+
+  .topbar-nav a:hover,
+  .hero-phone:hover {
+    color: var(--sage);
+  }
+
+  .visit-cta:hover .arrow,
+  .text-link:hover span,
+  .more-link:hover span {
+    transform: translateX(8px);
+  }
+
+  .crumbs a:hover {
+    color: var(--linen);
+  }
+
+  .visit-lines a:hover,
+  .foot-links a:hover {
+    color: var(--ink);
+  }
+}

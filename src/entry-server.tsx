@@ -1,44 +1,10 @@
-import { renderToString } from "react-dom/server";
-import { StaticRouter } from "react-router-dom/server";
-import type { HelmetServerState } from "react-helmet-async";
-import { AppProviders, AppRoutes } from "./App";
+import { renderToString } from 'react-dom/server'
+import App from './App'
+import { REDIRECTS, ROUTES } from './pages-data'
+import { headHtml, pageUrl } from './seo'
 
-/** Alle Seiten, die beim Build als statisches HTML erzeugt und in die Sitemap aufgenommen werden. */
-export const prerenderRoutes = [
-  "/",
-  "/ueber-mich",
-  "/leistungen",
-  "/insektenschutz",
-  "/sonnenschutz",
-  "/gardinen",
-  "/polsterei",
-  "/raumausstatter-dueren",
-  "/partner",
-  "/kontakt",
-  "/impressum",
-  "/datenschutz",
-];
+export { REDIRECTS, ROUTES, headHtml, pageUrl }
 
-export function render(url: string) {
-  const helmetContext: { helmet?: HelmetServerState } = {};
-  const html = renderToString(
-    <AppProviders helmetContext={helmetContext}>
-      <StaticRouter location={url}>
-        <AppRoutes />
-      </StaticRouter>
-    </AppProviders>,
-  );
-
-  const helmet = helmetContext.helmet;
-  const head = helmet
-    ? [
-        helmet.title.toString(),
-        helmet.meta.toString(),
-        helmet.link.toString(),
-        helmet.script.toString(),
-      ].join("\n    ")
-    : "";
-  const htmlAttributes = helmet ? helmet.htmlAttributes.toString() : "";
-
-  return { html, head, htmlAttributes };
+export function render(path: string) {
+  return renderToString(<App path={path} />)
 }

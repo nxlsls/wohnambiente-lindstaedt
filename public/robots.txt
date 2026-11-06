@@ -1,4 +1,4 @@
-# Wohnambiente Lindstädt - Raumausstattung in Kreuzau
+# Wohnambiente Lindstädt – Raumausstattung in Kreuzau
 # https://www.wohnambiente-lindstaedt.de
 
 User-agent: *
